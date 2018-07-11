@@ -1,0 +1,254 @@
+#user_photo{
+	float: left;
+	margin-left: 50px;
+	margin-top: 50px;
+	height: 200px;
+	width: 200px;
+}
+#user_email{
+	background-color:#FFFFFF;
+	float: top;
+	margin-left: 300px;
+	height: 100px;
+	width: 100%;
+	font-size: 20px;
+}
+#user_psw{
+	background-color:#FFFFFF;
+	float: top;
+	margin-left: 300px;
+	height: 100px;
+	width: 200px;
+	font-size: 20px;
+}
+#button_psw{
+	font-size: 14px;
+	float: left;
+	color: #fff;
+	background: #A9A9A9;
+	text-decoration: none;
+	position: relative;
+	border: none;
+	border-radius: 0;
+	width: 60px;
+	text-transform: uppercase;
+	padding: .5em 0;
+}
+#button_spsw{
+	display:none;
+	font-size: 14px;
+	float: left;
+	color: #fff;
+	background: #A9A9A9;
+	text-decoration: none;
+	position: relative;
+	border: none;
+	border-radius: 0;
+	width: 60px;
+	text-transform: uppercase;
+	padding: .5em 0;
+}
+#user_address{
+	background-color:#FFFFFF;
+	float: top;
+	margin-left: 300px;
+	height: 150px;
+	width: 100%;
+	font-size: 20px;
+}
+#text_address1{
+	float: top;
+	width: 500px;
+	height: 30px;
+}
+#text_address2{
+	float: top;
+	width: 500px;
+	height: 30px;
+}
+#text_address3{
+	float: top;
+	width: 500px;
+	height: 30px;
+}
+#button_address1{
+	font-size: 14px;
+	color: #fff;
+	background: #A9A9A9;
+	text-decoration: none;
+	position: relative;
+	border: none;
+	border-radius: 0;
+	height:30px;
+	text-transform: uppercase;
+	padding: .5em 0;
+	width: 60px;
+	float: left;
+	margin-left: 500px;
+	margin-top: -90px;
+}
+#button_address2{
+	font-size: 14px;
+	color: #fff;
+	background: #A9A9A9;
+	text-decoration: none;
+	position: relative;
+	border: none;
+	border-radius: 0;
+	height:30px;
+	text-transform: uppercase;
+	padding: .5em 0;
+	width: 60px;
+	float: left;
+	margin-left: 500px;
+	margin-top: -60px;
+}
+#button_address3{
+	font-size: 14px;
+	color: #fff;
+	background: #A9A9A9;
+	text-decoration: none;
+	position: relative;
+	border: none;
+	border-radius: 0;
+	height:30px;
+	text-transform: uppercase;
+	padding: .5em 0;
+	width: 60px;
+	float: left;
+	margin-left: 500px;
+	margin-top: -30px;
+}
+#button_saddress1{
+	font-size: 14px;
+	display: none;
+	color: #fff;
+	background: #A9A9A9;
+	text-decoration: none;
+	position: relative;
+	border: none;
+	border-radius: 0;
+	height:30px;
+	text-transform: uppercase;
+	padding: .5em 0;
+	width: 60px;
+	float: left;
+	margin-left: 500px;
+	margin-top: -90px;
+}
+#button_saddress2{
+	font-size: 14px;
+	display: none;
+	color: #fff;
+	background: #A9A9A9;
+	text-decoration: none;
+	position: relative;
+	border: none;
+	border-radius: 0;
+	height:30px;
+	text-transform: uppercase;
+	padding: .5em 0;
+	width: 60px;
+	float: left;
+	margin-left: 500px;
+	margin-top: -60px;
+}
+#button_saddress3{
+	font-size: 14px;
+	display: none;
+	color: #fff;
+	background: #A9A9A9;
+	text-decoration: none;
+	position: relative;
+	border: none;
+	border-radius: 0;
+	height:30px;
+	text-transform: uppercase;
+	padding: .5em 0;
+	width: 60px;
+	float: left;
+	margin-left: 500px;
+	margin-top: -30px;
+}
+#user_text{
+	font-size: 30px;
+}
+#button_good{
+	font-size: 14px;
+	color: #fff;
+	background: #A9A9A9;
+	text-decoration: none;
+	position: relative;
+	border: none;
+	border-radius: 0;
+	width: 60px;
+	text-transform: uppercase;
+	padding: .5em 0;
+	float: left;
+	margin-left: 65px;
+}
+#button_ugood{
+	font-size: 14px;
+	color: #fff;
+	background: #A9A9A9;
+	text-decoration: none;
+	position: relative;
+	border: none;
+	border-radius: 0;
+	width: 60px;
+	text-transform: uppercase;
+	padding: .5em 0;
+	float: left;
+}
+#button_sgood{
+	font-size: 14px;
+	display: none;
+	color: #fff;
+	background: #A9A9A9;
+	text-decoration: none;
+	position: relative;
+	border: none;
+	border-radius: 0;
+	width: 60px;
+	text-transform: uppercase;
+	padding: .5em 0;
+	float: left;
+	margin-left: 65px;
+}
+#good_text{
+	font-size: 30px;
+}
+#order_text{
+	font-size: 30px;
+	width: 100%;
+	float: left;
+}
+#button_order{
+	font-size: 14px;
+	color: #fff;
+	background: #A9A9A9;
+	text-decoration: none;
+	position: relative;
+	border: none;
+	border-radius: 0;
+	width: 60px;
+	text-transform: uppercase;
+	padding: .5em 0;
+}
+table{
+	border-collapse: collapse;
+	width: 500px;
+}
+tr{
+
+}
+th{
+	text-align: center;
+	width: 125px;
+}
+td{
+
+}
+table,tr,th,td{
+	border: 1px solid black;
+}

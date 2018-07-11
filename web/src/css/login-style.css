@@ -4,7 +4,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
 ol,ul{list-style:none;margin:0;padding:0;}
 blockquote,q{quotes:none;}
-blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';}
 table{border-collapse:collapse;border-spacing:0;}
 /* start editing from here */
 a{text-decoration:none;}
@@ -87,6 +87,54 @@ body{
 }
 .login-top input[type="password"]{
 	outline: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #818181;
+  padding: 15px 20px;
+  background: #CACACA;
+  border: 1px solid #ccc;
+  border-radius:25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -o-border-radius: 25px;
+  margin: 0px 0px 12px 0px;
+  width: 88%;
+  -webkit-appearance: none;
+}
+.register-top input[type="text"] {
+  outline: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #818181;
+  padding: 15px 20px;
+  background: #CACACA;
+  border: 1px solid #ccc;
+  border-radius:25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -o-border-radius: 25px;
+  margin: 0px 0px 12px 0px;
+  width: 88%;
+  -webkit-appearance: none;
+}
+.register-top input[type="password"]{
+  outline: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #818181;
+  padding: 15px 20px;
+  background: #CACACA;
+  border: 1px solid #ccc;
+  border-radius:25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -o-border-radius: 25px;
+  margin: 0px 0px 12px 0px;
+  width: 88%;
+  -webkit-appearance: none;
+}
+.register-top input[type="sure_password"]{
+  outline: none;
   font-size: 15px;
   font-weight: 500;
   color: #818181;
@@ -297,6 +345,24 @@ body {
   font-size: 13px;
   margin: 0px 0px 7px 0px;
 }
+  .register-top input[type="text"] {
+    width: 81%;
+    padding: 10px 20px;
+    font-size: 13px;
+    margin: 0px 0px 7px 0px;
+  }
+  .register-top input[type="password"] {
+    width: 81%;
+    padding: 10px 20px;
+    font-size: 13px;
+    margin: 0px 0px 7px 0px;
+  }
+  .register-top input[type="sure_password"] {
+    width: 81%;
+    padding: 10px 20px;
+    font-size: 13px;
+    margin: 0px 0px 7px 0px;
+  }
 .forgot input[type="submit"] {
   font-size: 20px;
   width: 25%;
@@ -602,6 +668,12 @@ body {
     margin: 0px 0px 7px 0px;
   }
   .register-top input[type="password"] {
+    width: 81%;
+    padding: 10px 20px;
+    font-size: 13px;
+    margin: 0px 0px 7px 0px;
+  }
+  .register-top input[type="sure_password"] {
     width: 81%;
     padding: 10px 20px;
     font-size: 13px;
