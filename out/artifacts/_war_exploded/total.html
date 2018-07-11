@@ -36,9 +36,28 @@
 	
 <body>
 <!-- header -->
+<div class="logo_products">
+	<div class="container">
+		<div class="w3ls_logo_products_left">
+			<h1><a href="index.html"><span>Grocery</span> Store</a></h1>
+		</div>
+		<div class="w3ls_logo_products_left1">
+			<ul class="special_items">
+				<li>Let  Your Something swim<i>/</i></li>
+			</ul>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+</div>
 <div class="agileits_header">
 	<div class="w3l_offers">
 		<a href="index.html">二手交易市场！</a>
+	</div>
+	<div class="w3l_search">
+		<form action="#" method="post">
+			<input type="text" name="Product" value="搜索商品..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '搜索商品...';}" required="">
+			<input type="submit" value="查 询">
+		</form>
 	</div>
 	<div class="w3l_header_right1">
 		<ul>
@@ -88,18 +107,14 @@
 			   <!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 					<ul class="nav navbar-nav nav_1">
-						<li><a href="mine.html">个人信息</a></li>
-						<li><a href="total.html">商品一览</a></li>
+						<li><a href="total.html" class="active">商品一览</a></li>
+						<li><a href="goods.html">我的店铺</a></li>
+						<li><a href="order.html">订单信息</a></li>
 						<li><a href="collection.html">收藏夹</a></li>
+						<li><a href="mine.html">个人信息</a></li>
 					</ul>
 				 </div><!-- /.navbar-collapse -->
 			</nav>
-		</div>
-		<div class="w3l_search">
-			<form action="#" method="post">
-				<input type="text" name="Product" value="搜索商品..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '搜索商品...';}" required="">
-				<input type="submit" value="查 询">
-			</form>
 		</div>
 		<div class="w3l_banner_nav_right">
 			<div class="w3ls_w3l_banner_nav_right_grid w3ls_w3l_banner_nav_right_grid_sub">
@@ -117,7 +132,7 @@
 										</div>
 										<div class="snipcart-details">
 											<button class="btn btn-danger my-cart-btn hvr-sweep-to-right" data-id="17" data-name="Dishwash gel, lemon" data-summary="summary 17" data-price="8.00" data-quantity="1" data-image="images/17.png">购买</button>
-											<button class="btn btn1-danger my-cart-btn1 hvr-sweep-to-right" >收藏</button>
+											<button class="btn btn1-danger my-cart-btn1 hvr-sweep-to-right" id="tip" >收藏</button>
 										</div>
 									</div>
 								</figure>
@@ -138,7 +153,7 @@
 										</div>
 										<div class="snipcart-details">
 											<button class="btn btn-danger my-cart-btn hvr-sweep-to-right" data-id="18" data-name="Dish wash bar" data-summary="summary 18" data-price="2.00" data-quantity="1" data-image="images/18.png">购买</button>
-											<button class="btn btn1-danger my-cart-btn1 hvr-sweep-to-right" >收藏</button>
+											<button class="btn btn1-danger my-cart-btn1 hvr-sweep-to-right"  >收藏</button>
 										</div>
 									</div>
 								</figure>
@@ -405,6 +420,11 @@ $(document).ready(function(){
 								
 			});
 	</script>
-
+<!-- 收藏按钮事件 -->
+	<script type="text/javascript">
+		$("#tip").get(0).onclick = function(){
+			alert("收藏成功！");
+		};
+	</script>
 </body>
 </html>

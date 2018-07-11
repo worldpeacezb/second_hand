@@ -132,7 +132,7 @@
 										</div>
 										<div class="snipcart-details">
 											<button class="btn btn-danger my-cart-btn hvr-sweep-to-right" data-id="17" data-name="Dishwash gel, lemon" data-summary="summary 17" data-price="8.00" data-quantity="1" data-image="images/17.png">购买</button>
-											<button class="btn btn1-danger my-cart-btn1 hvr-sweep-to-right" >收藏</button>
+											<button class="btn btn1-danger my-cart-btn1 hvr-sweep-to-right" id="tip" >收藏</button>
 										</div>
 									</div>
 								</figure>
@@ -153,7 +153,7 @@
 										</div>
 										<div class="snipcart-details">
 											<button class="btn btn-danger my-cart-btn hvr-sweep-to-right" data-id="18" data-name="Dish wash bar" data-summary="summary 18" data-price="2.00" data-quantity="1" data-image="images/18.png">购买</button>
-											<button class="btn btn1-danger my-cart-btn1 hvr-sweep-to-right" >收藏</button>
+											<button class="btn btn1-danger my-cart-btn1 hvr-sweep-to-right"  >收藏</button>
 										</div>
 									</div>
 								</figure>
@@ -420,6 +420,11 @@ $(document).ready(function(){
 								
 			});
 	</script>
-
+<!-- 收藏按钮事件 -->
+	<script type="text/javascript">
+		$("#tip").get(0).onclick = function(){
+			alert("收藏成功！");
+		};
+	</script>
 </body>
 </html>
