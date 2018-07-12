@@ -82,7 +82,6 @@
                 $(".agileits_header").removeClass("fixed");
             }
         });
-
     });
 </script>
 <!-- banner -->
@@ -116,7 +115,7 @@
                 <input type="text" onfocus="WdatePicker({ maxDate:'#F{$dp.$D(\'logmax\')||\'%y-%M-%d\'}' })" id="logmin" class="input-text Wdate" style="width:120px;">
                 -
                 <input type="text" onfocus="WdatePicker({ minDate:'#F{$dp.$D(\'logmin\')}',maxDate:'%y-%M-%d' })" id="logmax" class="input-text Wdate" style="width:120px;">
-                <input type="text" name="" id="placeholder=" 产品名称" style="width:250px" class="input-text">
+                <input type="text" name="" id="placeholder"  style="width:250px" class="input-text">
                 <button name="" id="" class="btn btn-success" type="submit">
                     <i class="Hui-iconfont"></i> 搜产品</button>
             </div>
@@ -146,10 +145,11 @@
                             <th width="40" class="sorting_disabled" rowspan="1" colspan="1" aria-label="" style="width: 40px;">
                                 <input name="" type="checkbox" value="">
                             </th>
-                            <th width="100" class="sorting_desc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="descending" aria-label="ID: 升序排列" style="width: 40px;">ID</th>
+                            <th width="100" class="sorting_desc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="descending" aria-label="ID: 升序排列" style="width: 40px;">序号</th>
                             <th width="100" class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="缩略图: 升序排列" style="width: 60px;">缩略图</th>
                             <th width="100" class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="产品名称: 升序排列" style="width: 100px;">产品名称</th>
-                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="描述: 升序排列" style="width: 200px;">收货地址</th>
+                            <th width="100" class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="产品名称: 升序排列" style="width: 50px;">交易人</th>
+                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="描述: 升序排列" style="width: 150px;">收货地址</th>
                             <th width="100" class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="价格: 升序排列" style="width: 100px;">价格</th>
                             <th width="60" class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="发布状态: 升序排列" style="width: 60px;">我的身份</th>
                             <th width="100" class="sorting_disabled" rowspan="1" colspan="1" aria-label="操作" style="width: 72px;">操作</th>
@@ -157,17 +157,18 @@
                         <tbody>
                         <tr class="text-c va-m odd" role="row">
                             <td><input name="" type="checkbox" value=""></td>
-                            <td class="sorting_1">001</td>
+                            <td class="sorting_1">1</td>
                             <td>
                                 <a onclick="product_show('哥本哈根橡木地板','product-show.html','10001')" href="javascript:;">	<img width="60" class="product-thumb" src="src/images/9.jpg">
                                 </a>
                             </td>
-                            <td class="text-l">
+                            <td class="text-good">
                                 <a style="text-decoration:none" onclick="product_show('哥本哈根橡木地板','product-show.html','10001')" href="javascript:;">
                                     <b class="text-success">圣象</b>哥本哈根橡木地板KS8373</a>
                             </td>
-                            <td class="text-l">13900000000-X省X市X区(县)X街道(乡镇)X号</td>
-                            <td><span class="price">356.00</span>元</td>
+                            <td class="text-name">XXX</td>
+                            <td class="text-address">13900000000-X省X市X区(县)X街道(乡镇)X号</td>
+                            <td><span class="text-price">356.00</span>元</td>
                             <td class="td-status"><span class="label label-success radius">卖家</span></td>
                             <td class="td-manage"><span class="Hui-iconfont">发货</span></td>
                         </tr>
