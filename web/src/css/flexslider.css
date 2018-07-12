@@ -122,9 +122,9 @@ html[xmlns] .slides {display: block;}
 }
 @media screen and (max-width:667px) {
 	
-@media screen and (max-width: 600px) {
-	
-}
+/*@media screen and (max-width: 600px) {*/
+	/**/
+/*}*/
 @media screen and (max-width: 480px) {
 	section.slider {
 		padding-top: 0%;
@@ -137,10 +137,12 @@ html[xmlns] .slides {display: block;}
 	}
 }
 @media screen and (max-width: 414px){
-	
+
+
+
 @media screen and (max-width: 320px) {
 	section.slider {
 		padding-top: 0%;
 	}
-	
+
 }

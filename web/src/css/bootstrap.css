@@ -3123,11 +3123,11 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  background-color: #CC9999;
+  border-color: #CC9999;
 }
 .btn-primary .badge {
-  color: #337ab7;
+  color: #CC9999;
   background-color: #fff;
 }
 .btn-success {
