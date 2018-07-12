@@ -537,6 +537,12 @@ body {
   outline: none;
   border: none;
 }
+#b3{
+  /*background: #F45B4B;*/
+  background: #fff;
+  text-align: center;
+
+}
 .forgot input[type="submit"]:hover {
   background:#818181;
   color:#818181;

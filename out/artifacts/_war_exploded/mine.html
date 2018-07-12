@@ -15,6 +15,7 @@
     <!-- font-awesome icons -->
     <link href="src/css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
     <!-- //font-awesome icons -->
+    <link href="src/css/mine.css" rel="stylesheet" type="text/css" media="all" />
     <!-- js -->
     <script src="js/jquery-1.11.1.min.js"></script>
     <!-- //js -->
@@ -36,6 +37,19 @@
 
 <body>
 <!-- header -->
+<div class="logo_products">
+    <div class="container">
+        <div class="w3ls_logo_products_left">
+            <h1><a href="index.html"><span>Grocery</span> Store</a></h1>
+        </div>
+        <div class="w3ls_logo_products_left1">
+            <ul class="special_items">
+                <li>Let  Your Something swim<i>/</i></li>
+            </ul>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
 <div class="agileits_header">
     <div class="w3l_offers">
         <a href="index.html">二手交易市场！</a>
@@ -87,12 +101,135 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                 <ul class="nav navbar-nav nav_1">
-                    <li><a href="#">个人信息</a></li>
                     <li><a href="total.html">商品一览</a></li>
+                    <li><a href="goods.html">我的店铺</a></li>
+                    <li><a href="order.html">订单信息</a></li>
                     <li><a href="collection.html">收藏夹</a></li>
+                    <li><a href="mine.html" class="active">个人信息</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
+    </div>
+    <div class="w3l_banner_nav_right">
+        <div id="user_text">我的信息</div>
+        <div id="user_photo">
+            <img src="src/images/b.jpg" onmouseover="showA(this)" onmouseout="showB(this)">
+            <script>
+                function showA(obj)
+                {
+                    obj.src="src/images/a.jpg";
+                }
+                function showB(obj)
+                {
+                    obj.src="src/images/b.jpg"
+                }
+            </script>
+        </div>
+        <div id="user_email">
+            <div>邮箱:</div><div>123456789@qq.com</div>
+        </div>
+        <div id="user_psw">
+            <div>密码:</div><div id="text_psw">12345678</div>
+            <script type="text/javascript">
+                function hide(){
+                    var text = document.getElementById('text_psw'),
+                        pswVal = text.innerHTML;
+                    var newpswVal = '';
+                    if(pswVal.length > 0){
+                        for(var i = 0; i < pswVal.length; i++){
+                            if(i < 3 || i >= pswVal.length-3){
+                                newpswVal += pswVal[i];
+                            }else{
+                                newpswVal += '*';
+                            }
+                        }
+                    }
+                    tel.innerHTML = newpswVal;
+                }
+            </script>
+            <button type="button" id="button_psw" onclick="none_block()">修改</button>
+            <button type="button" id="button_spsw" onclick="block_none()">保存</button>
+            <script type="text/javascript">
+                function none_block(){
+                    var text=document.getElementById("text_psw");
+                    var val=text.innerHTML;
+                    text.innerHTML="<input style='width: 200px;' type='text' id='n_psw' value="+val+" />";
+                    document.getElementById("n_psw").focus();
+                    document.getElementById("n_psw").addEventListener("blur",function(e){
+                        text.innerHTML=document.getElementById("n_psw").value;
+                    });
+                    document.getElementById("button_psw").style.display="none";
+                    document.getElementById("button_spsw").style.display="block";
+                };
+                function block_none(){
+                    document.getElementById("button_psw").style.display="block";
+                    document.getElementById("button_spsw").style.display="none";
+                }
+            </script>
+        </div>
+        <div id="user_address">
+            <div>收货地址:</div>
+            <div id="text_address1">13700000000-X省X市X区(县)X街道(乡镇)XX号</div>
+            <div id="text_address2">13800000000-X省X市X区(县)X街道(乡镇)XX号</div>
+            <div id="text_address3">13900000000-X省X市X区(县)X街道(乡镇)XX号</div>
+            <button type="button" id="button_address1" onclick="none_block1()">修改</button>
+            <button type="button" id="button_saddress1" onclick="block_none1()">保存</button>
+            <script type="text/javascript">
+                function none_block1(){
+                    var text=document.getElementById("text_address1");
+                    var val=text.innerHTML;
+                    text.innerHTML="<input style='width:500px' type='text' id='n_address1' value="+val+" />";
+                    document.getElementById("n_address1").focus();
+                    document.getElementById("n_address1").addEventListener("blur",function(e){
+                        text.innerHTML=document.getElementById("n_address1").value;
+                    });
+                    document.getElementById("button_address1").style.display="none";
+                    document.getElementById("button_saddress1").style.display="block";
+                };
+                function block_none1(){
+                    document.getElementById("button_address1").style.display="block";
+                    document.getElementById("button_saddress1").style.display="none";
+                };
+            </script>
+            <button type="button" id="button_address2" onclick="none_block2()">修改</button>
+            <button type="button" id="button_saddress2" onclick="block_none2()">保存</button>
+            <script type="text/javascript">
+                function none_block2(){
+                    var text=document.getElementById("text_address2");
+                    var val=text.innerHTML;
+                    text.innerHTML="<input style='width:500px' type='text' id='n_address2' value="+val+" />";
+                    document.getElementById("n_address2").focus();
+                    document.getElementById("n_address2").addEventListener("blur",function(e){
+                        text.innerHTML=document.getElementById("n_address2").value;
+                    });
+                    document.getElementById("button_address2").style.display="none";
+                    document.getElementById("button_saddress2").style.display="block";
+                };
+                function block_none2(){
+                    document.getElementById("button_address2").style.display="block";
+                    document.getElementById("button_saddress2").style.display="none";
+                };
+            </script>
+            <button type="button" id="button_address3" onclick="none_block3()">修改</button>
+            <button type="button" id="button_saddress3" onclick="block_none3()">保存</button>
+            <script type="text/javascript">
+                function none_block3(){
+                    var text=document.getElementById("text_address3");
+                    var val=text.innerHTML;
+                    text.innerHTML="<input style='width:500px' type='text' id='n_address3' value="+val+" />";
+                    document.getElementById("n_address3").focus();
+                    document.getElementById("n_address3").addEventListener("blur",function(e){
+                        text.innerHTML=document.getElementById("n_address3").value;
+                    });
+                    document.getElementById("button_address3").style.display="none";
+                    document.getElementById("button_saddress3").style.display="block";
+                };
+                function block_none3(){
+                    document.getElementById("button_address3").style.display="block";
+                    document.getElementById("button_saddress3").style.display="none";
+                };
+            </script>
+        </div>
     </div>
 </div>
 <!-- Bootstrap Core JavaScript -->
