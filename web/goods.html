@@ -111,6 +111,48 @@
     </div>
 	<div class="w3l_banner_nav_right">
 		<div id="good_text">我的商品</div>
+		<button id="button_ugood" type="button" onclick="good_up()">上传</button>
+		<button id="button_good" type="button" onclick="none_block4()">修改</button>
+		<button id="button_sgood" type="button" onclick="block_none4()">保存</button>
+		<div id="pic" style="position: absolute;width: 200px;height: 200px; background:#fff;visibility: hidden">
+		</div>
+		<br><br><br><br><br><br>
+		<script type="text/javascript">
+            function showname(){
+                document.getElementById("good_picname").value = document.getElementById("good_pic").value;
+            }
+            function good_up(){
+                var x=event.clientX;
+                var y=event.clientY;
+                document.getElementById("pic").style.top=y+50;
+                document.getElementById("pic").style.left=x;
+                document.getElementById("pic").style.visibility="visible";
+                var formDiv="<form action='#'>";
+                formDiv+="商品名称:<input type='text' id='good_name' /><br>";
+                formDiv+="商品价格:<input type='text' id='good_prise' /><br>";
+                formDiv+="商品图片:<input type='text' id='good_picname' /><input type='file' onchange='showname()' id='good_pic' style='width:80px'/><br>";
+                formDiv+="<input type='submit' value='提交' onclick='hide()' /></form>";
+                document.getElementById("pic").innerHTML=formDiv;
+                document.getElementById("good_name").focus();
+            }
+            function hide(){
+                document.getElementById("pic").style.visibility="hidden";
+            }
+            function none_block4(){
+                /*var text=document.getElementById("text_address3");
+                var val=text.innerHTML;
+                text.innerHTML="<input style='width:750px' type='text' id='n_address3' value="+val+" />";
+                document.getElementById("n_address3").addEventListener("blur",function(e){
+                text.innerHTML=document.getElementById("n_address3").value;
+                });*/
+                document.getElementById("button_good").style.display="none";
+                document.getElementById("button_sgood").style.display="block";
+            }
+            function block_none4(){
+                document.getElementById("button_good").style.display="block";
+                document.getElementById("button_sgood").style.display="none";
+            }
+		</script>
 		<div class="w3ls_w3l_banner_nav_right_grid w3ls_w3l_banner_nav_right_grid_sub">
 			<div class="w3ls_w3l_banner_nav_right_grid1">
 				<div class="col-md-3 w3ls_w3l_banner_left">
@@ -162,25 +204,6 @@
 				<div class="clearfix"> </div>
 			</div>
 		</div>
-		<button id="button_ugood" type="button" onclick="good_up()">上传</button>
-		<button id="button_good" type="button" onclick="none_block4()">修改</button>
-		<button id="button_sgood" type="button" onclick="block_none4()">保存</button>
-		<script type="text/javascript">
-		function none_block4(){
-			/*var text=document.getElementById("text_address3");
-			var val=text.innerHTML;
-			text.innerHTML="<input style='width:750px' type='text' id='n_address3' value="+val+" />";
-			document.getElementById("n_address3").addEventListener("blur",function(e){
-    		text.innerHTML=document.getElementById("n_address3").value;
-			});*/
-    		document.getElementById("button_good").style.display="none";
-    		document.getElementById("button_sgood").style.display="block";
-		};
-		function block_none4(){
-    		document.getElementById("button_good").style.display="block";
-    		document.getElementById("button_sgood").style.display="none";
-		};
-		</script>
 	</div>
 </div>
 <!-- Bootstrap Core JavaScript -->
