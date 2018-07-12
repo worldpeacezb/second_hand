@@ -21,6 +21,9 @@
 	width: 200px;
 	font-size: 20px;
 }
+#text_psw{
+	display: none;
+}
 #button_psw{
 	font-size: 14px;
 	float: left;
@@ -56,19 +59,19 @@
 	width: 100%;
 	font-size: 20px;
 }
-#text_address1{
+#text_num1{
 	float: top;
-	width: 500px;
+	width: 130px;
 	height: 30px;
 }
-#text_address2{
+#text_num2{
 	float: top;
-	width: 500px;
+	width: 130px;
 	height: 30px;
 }
-#text_address3{
+#text_num3{
 	float: top;
-	width: 500px;
+	width: 130px;
 	height: 30px;
 }
 #button_address1{
@@ -85,7 +88,7 @@
 	width: 60px;
 	float: left;
 	margin-left: 500px;
-	margin-top: -90px;
+	margin-top: -150px;
 }
 #button_address2{
 	font-size: 14px;
@@ -101,10 +104,62 @@
 	width: 60px;
 	float: left;
 	margin-left: 500px;
-	margin-top: -60px;
+	margin-top: -90px;
 }
 #button_address3{
 	font-size: 14px;
+	color: #fff;
+	background: #A9A9A9;
+	text-decoration: none;
+	position: relative;
+	border: none;
+	border-radius: 0;
+	height:30px;
+	text-transform: uppercase;
+	padding: .5em 0;
+	width: 60px;
+	float: left;
+	margin-left: 500px;
+	margin-top: -30px;
+}
+
+#button_naddress1{
+	font-size: 14px;
+	display: none;
+	color: #fff;
+	background: #A9A9A9;
+	text-decoration: none;
+	position: relative;
+	border: none;
+	border-radius: 0;
+	height:30px;
+	text-transform: uppercase;
+	padding: .5em 0;
+	width: 60px;
+	float: left;
+	margin-left: 500px;
+	margin-top: -150px;
+}
+#button_naddress2{
+	font-size: 14px;
+	display: none;
+	color: #fff;
+	background: #A9A9A9;
+	text-decoration: none;
+	position: relative;
+	border: none;
+	border-radius: 0;
+	height:30px;
+	text-transform: uppercase;
+	padding: .5em 0;
+	width: 60px;
+	float: left;
+	margin-left: 500px;
+	margin-top: -90px;
+}
+#button_naddress3{
+	font-size: 14px;
+	display: none;
 	color: #fff;
 	background: #A9A9A9;
 	text-decoration: none;
@@ -134,7 +189,7 @@
 	width: 60px;
 	float: left;
 	margin-left: 500px;
-	margin-top: -90px;
+	margin-top: -150px;
 }
 #button_saddress2{
 	font-size: 14px;
@@ -151,7 +206,7 @@
 	width: 60px;
 	float: left;
 	margin-left: 500px;
-	margin-top: -60px;
+	margin-top: -90px;
 }
 #button_saddress3{
 	font-size: 14px;
