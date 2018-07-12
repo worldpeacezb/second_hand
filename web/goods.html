@@ -11,18 +11,15 @@
     <!-- //for-mobile-apps -->
     <link href="src/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="src/css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <!-- font-awesome icons -->
     <link href="src/css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
-    <!-- //font-awesome icons -->
     <link href="src/css/mine.css" rel="stylesheet" type="text/css" media="all" />
     <!-- js -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
     <script src="js/jquery-1.11.1.min.js"></script>
-    <!-- //js -->
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
     <!-- start-smoth-scrolling -->
-    <script type="text/javascript" src="js/move-top.js"></script>
-    <script type="text/javascript" src="js/easing.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function($) {
             $(".scroll").click(function(event){
@@ -43,7 +40,7 @@
 		</div>
 		<div class="w3ls_logo_products_left1">
 			<ul class="special_items">
-				<li>Let  Your Something swim<i>/</i></li>
+				<li>Let  Your Something swim</li>
 			</ul>
 		</div>
 		<div class="clearfix"> </div>
@@ -53,21 +50,7 @@
     <div class="w3l_offers">
         <a href="index.html">二手交易市场！</a>
     </div>
-    <div class="w3l_header_right1">
-        <ul>
-            <li class="dropdown profile_details_drop">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i><span class="caret"></span></a>
-                <div class="mega-dropdown-menu">
-                    <div class="w3ls_vegetables">
-                        <ul class="dropdown-menu drp-mnu">
-                            <li><a href="login.html">Login</a></li>
-                            <li><a href="login.html">Sign Up</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
+
     <div class="clearfix"> </div>
 </div>
 <!-- script-for sticky-nav -->
@@ -85,20 +68,13 @@
 
     });
 </script>
+<script type="text/javascript">
+
+</script>
 <!-- banner -->
 <div class="banner">
     <div class="w3l_banner_nav_left">
         <nav class="navbar nav_bottom">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header nav_2">
-                <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 				<ul class="nav navbar-nav nav_1">
 					<li><a href="total.html">商品一览</a></li>
@@ -112,6 +88,52 @@
     </div>
 	<div class="w3l_banner_nav_right">
 		<div id="good_text">我的商品</div>
+		<!-- 模态框（Modal） -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							&times;
+						</button>
+						<h4 class="modal-title" id="myModalLabel">
+							选择收货地址信息
+						</h4>
+					</div>
+					<div class="modal-body">
+						<form action="" id="nameform">
+							<button type="button" class="btn btn-default dropdown-toggle btn-lg"
+									data-toggle="dropdown">
+								五一广场 <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#">五一广场</a></li>
+								<li><a href="#">太平老街</a></li>
+								<li><a href="#">郁金香酒店</a></li>
+							</ul>
+							<div class="btn-group">
+								<button type="button" class="btn btn-default dropdown-toggle btn-lg"
+										data-toggle="dropdown">
+									345678 <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#">45678</a></li>
+									<li><a href="#">456789</a></li>
+									<li><a href="#">4356789</a></li>
+								</ul>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+						</button>
+						<button type="button" class="btn btn-primary">
+							提交更改
+						</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal -->
+		</div>
 		<div class="w3ls_w3l_banner_nav_right_grid w3ls_w3l_banner_nav_right_grid_sub">
 			<div class="w3ls_w3l_banner_nav_right_grid1">
 				<div class="col-md-3 w3ls_w3l_banner_left">
@@ -129,7 +151,11 @@
 											<h4>$7.00</h4>
 										</div>
 										<div class="snipcart-details">
-											<button class="btn btn-danger my-cart-btn hvr-sweep-to-right" data-id="28" data-name="Chicken in jelly can" data-summary="summary 28" data-price="7.00" data-quantity="1" data-image="src/images/18.png">购买</button>
+											<button class="btn btn-danger my-cart-btn hvr-sweep-to-right"
+													data-id="28" data-name="Chicken in jelly can" data-summary="summary 28"
+													data-price="7.00" data-quantity="1" data-image="src/images/18.png"
+													data-toggle="modal" data-target="#myModal"
+											>购买</button>
 										</div>
 									</div>
 								</figure>
@@ -152,7 +178,9 @@
 											<h4>$7.00</h4>
 										</div>
 										<div class="snipcart-details">
-											<button class="btn btn-danger my-cart-btn hvr-sweep-to-right" data-id="28" data-name="Chicken in jelly can" data-summary="summary 28" data-price="7.00" data-quantity="1" data-image="src/images/18.png">购买</button>
+											<button class="btn btn-danger my-cart-btn hvr-sweep-to-right"
+													data-id="28" data-name="Chicken in jelly can" data-summary="summary 28"
+													data-price="7.00" data-quantity="1" data-image="src/images/18.png">购买</button>
 										</div>
 									</div>
 								</figure>
