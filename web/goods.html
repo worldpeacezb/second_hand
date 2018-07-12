@@ -114,7 +114,7 @@
 		<button id="button_ugood" type="button" onclick="good_up()">上传</button>
 		<button id="button_good" type="button" onclick="none_block4()">修改</button>
 		<button id="button_sgood" type="button" onclick="block_none4()">保存</button>
-		<div id="pic" style="position: absolute;width: 200px;height: 200px; background:#fff;visibility: hidden">
+		<div id="pic" style="position: absolute;width: 100%;height: 200px; background:#fff;visibility: hidden">
 		</div>
 		<br><br><br><br><br><br>
 		<script type="text/javascript">
@@ -128,9 +128,10 @@
                 document.getElementById("pic").style.left=x;
                 document.getElementById("pic").style.visibility="visible";
                 var formDiv="<form action='#'>";
-                formDiv+="商品名称:<input type='text' id='good_name' /><br>";
-                formDiv+="商品价格:<input type='text' id='good_prise' /><br>";
-                formDiv+="商品图片:<input type='text' id='good_picname' /><input type='file' onchange='showname()' id='good_pic' style='width:80px'/><br>";
+                formDiv+="<div>商品名称:</div><input type='text' id='good_name' /><br>";
+                formDiv+="<div>商品价格:</div><input type='text' id='good_prise' /><br>";
+                formDiv+="<div>商品图片:</div><input type='text' id='good_picname' /><input type='file' onchange='showname()' id='good_pic' style='width:80px'/>";
+                formDiv+="<div style='margin-left: 200px;margin-top: -150px'>商品描述:</div><textarea type='text' id='good_info' style='width:200px ;height: 100px ;margin-left: 200px'></textarea><br><br><br><br>";
                 formDiv+="<input type='submit' value='提交' onclick='hide()' /></form>";
                 document.getElementById("pic").innerHTML=formDiv;
                 document.getElementById("good_name").focus();
