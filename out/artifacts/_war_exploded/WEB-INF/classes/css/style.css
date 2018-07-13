@@ -546,6 +546,23 @@ ul.dropdown-menu.drp-mnu li a i {
 	text-transform: uppercase;
 	padding: .5em 0;
 }
+.btn-danger.my-cart-btn2:focus {
+	outline: none;
+}
+.btn-danger.my-cart-btn2{
+	font-size: 14px;
+	float: left;
+	color: #fff;
+	background: #696969;
+	text-decoration: none;
+	position: relative;
+	border: none;
+	border-radius: 0;
+	width: 50%;
+	text-transform: uppercase;
+	padding: .5em 0;
+	display: none;
+}
 .btn1-danger.my-cart-btn1:focus {
 	outline: none;
 }

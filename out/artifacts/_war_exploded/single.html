@@ -178,7 +178,8 @@
 									data-quantity="1" data-image="images/76.png"
 									data-toggle="modal" data-target="#myModal"
 							>购买</button>
-							<button class="btn btn-danger my-cart-btn hvr-sweep-to-right" >收藏</button>
+							<button class="btn btn-danger my-cart-btn hvr-sweep-to-right" id="collect" onclick="collect()">收藏</button>
+							<button class="btn btn-danger my-cart-btn2 " id="no_collect" onclick="no_collect()">取消收藏</button>
 						</div>
 					</div>
 				</div>
@@ -224,42 +225,50 @@ $(document).ready(function(){
 <!-- //here ends scrolling icon -->
 <script type='text/javascript' src="js/jquery.mycart.js"></script>
 <script type="text/javascript">
-  $(function () {
+	$(function () {
+	    var goToCartIcon = function($addTocartBtn){
+	        var $cartIcon = $(".my-cart-icon");
+	        var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
+	        $addTocartBtn.prepend($image);
+	        var position = $cartIcon.position();
+	        $image.animate({
 
-    var goToCartIcon = function($addTocartBtn){
-      var $cartIcon = $(".my-cart-icon");
-      var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
-      $addTocartBtn.prepend($image);
-      var position = $cartIcon.position();
-      $image.animate({
-	  
-      }, 500 , "linear", function() {
-        $image.remove();
-      });
-    }
-
-    $('.my-cart-btn').myCart({
-      classCartIcon: 'my-cart-icon',
-      classCartBadge: 'my-cart-badge',
-      affixCartIcon: true,
-      checkoutCart: function(products) {
-        $.each(products, function(){
-          console.log(this);
-        });
-      },
-      clickOnAddToCart: function($addTocart){
-        goToCartIcon($addTocart);
-      },
-      getDiscountPrice: function(products) {
-        var total = 0;
-        $.each(products, function(){
-          total += this.quantity * this.price;
-        });
-        return total * 1;
-      }
-    });
-
-  });
+			}, 500 , "linear", function() {
+	            $image.remove();
+	        });
+	    }
+	    $('.my-cart-btn').myCart({
+			classCartIcon: 'my-cart-icon',
+			classCartBadge: 'my-cart-badge',
+			affixCartIcon: true,
+			checkoutCart: function(products) {
+			    $.each(products, function(){
+			        console.log(this);
+			    });
+			},
+			clickOnAddToCart: function($addTocart){
+			    goToCartIcon($addTocart);
+			},
+			getDiscountPrice: function(products) {
+			    var total = 0;
+			    $.each(products, function(){
+			        total += this.quantity * this.price;
+			    });
+			    return total * 1;
+			}
+	    });
+	});
+  <!-- 收藏按钮事件 -->
+	function collect(){
+      alert("收藏成功！");
+      document.getElementById("collect").style.display = "none";
+      document.getElementById("no_collect").style.display = "block";
+  };
+    function no_collect(){
+        alert("取消成功！");
+        document.getElementById("collect").style.display = "block";
+        document.getElementById("no_collect").style.display = "none";
+    };
   </script>
 </body>
 </html>
