@@ -119,7 +119,7 @@
 		<br><br><br><br><br><br>
 		<script type="text/javascript">
             function showname(){
-                document.getElementById("good_picname").value = document.getElementById("good_pic").value;
+                document.getElementById("good_pic_name").value = document.getElementById("good_pic").value;
             }
             function good_up(){
                 var x=event.clientX;
@@ -130,14 +130,22 @@
                 var formDiv="<form action='#'>";
                 formDiv+="<div>商品名称:</div><input type='text' id='good_name' /><br>";
                 formDiv+="<div>商品价格:</div><input type='text' id='good_prise' /><br>";
-                formDiv+="<div>商品图片:</div><input type='text' id='good_picname' /><input type='file' onchange='showname()' id='good_pic' style='width:80px'/>";
+                formDiv+="<div>商品图片:</div><input type='text' id='good_pic_name' disabled style='background-color: #D3D4D3'/><input type='file' onchange='showname()' id='good_pic' style='width:80px'/>";
                 formDiv+="<div style='margin-left: 200px;margin-top: -150px'>商品描述:</div><textarea type='text' id='good_info' style='width:200px ;height: 100px ;margin-left: 200px'></textarea><br><br><br><br>";
                 formDiv+="<input type='submit' value='提交' onclick='hide()' /></form>";
                 document.getElementById("pic").innerHTML=formDiv;
                 document.getElementById("good_name").focus();
             }
             function hide(){
+                var text1=document.getElementById("good_name").value;
+                var text2=document.getElementById("good_prise").value;
+                var text3=document.getElementById("good_pic_name").value;
+                if(text1==""||text2==""||text3==""){
+                    alert("名称、价格、预览图不能为空！");//弹出提示
+                    return false;
+				}
                 document.getElementById("pic").style.visibility="hidden";
+                return true;
             }
             function none_block4(){
                 /*var text=document.getElementById("text_address3");
@@ -163,7 +171,7 @@
 								<figure>
 									<div class="snipcart-item block">
 										<div class="snipcart-thumb">
-											<a href="single.html"><img src="src/images/1.jpg" alt=" " class="img-responsive" /></a>
+											<a href="mirror.html"><img src="src/images/1.jpg" alt=" " class="img-responsive" /></a>
 											<p>chicken in jelly can (400 gm)</p>
 											<h4>$7.00</h4>
 										</div>
@@ -183,7 +191,7 @@
 								<figure>
 									<div class="snipcart-item block">
 										<div class="snipcart-thumb">
-											<a href="single.html"><img src="src/images/1.jpg" alt=" " class="img-responsive" /></a>
+											<a href="mirror.html"><img src="src/images/1.jpg" alt=" " class="img-responsive" /></a>
 											<p>chicken in jelly can (400 gm)</p>
 											<h4>$7.00</h4>
 										</div>
