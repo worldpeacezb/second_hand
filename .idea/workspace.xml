@@ -7,8 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9bff8573-6994-4ce3-ae4a-dbcf4b5a76c7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/web/js/copy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/_war_exploded/WEB-INF/classes/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/_war_exploded/WEB-INF/classes/css/bootstrap.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/_war_exploded/WEB-INF/classes/css/flexslider.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/_war_exploded/WEB-INF/classes/css/flexslider.css" afterDir="false" />
@@ -22,12 +20,6 @@
       <change beforePath="$PROJECT_DIR$/out/artifacts/_war_exploded/src/css/flexslider.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/_war_exploded/src/css/flexslider.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/_war_exploded/src/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/_war_exploded/src/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/_war_exploded/total.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/_war_exploded/total.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/member-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/member-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/static/h-ui/css/H-ui.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/static/h-ui/css/H-ui.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/goods.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/goods.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/mirror.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/mirror.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/total.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/total.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,8 +43,8 @@
       <file leaf-file-name="member-list.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/admin/member-list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+            <state relative-caret-position="608">
+              <caret line="50" column="26" lean-forward="true" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
@@ -576,7 +568,7 @@
       <workItem from="1531365253440" duration="2507000" />
       <workItem from="1531375380559" duration="2593000" />
       <workItem from="1531382003178" duration="5100000" />
-      <workItem from="1531442455621" duration="1063000" />
+      <workItem from="1531442455621" duration="1580000" />
     </task>
     <task id="LOCAL-00001" summary="二手">
       <created>1531209636499</created>
@@ -655,11 +647,18 @@
       <option name="project" value="LOCAL" />
       <updated>1531366707751</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="phn">
+      <created>1531443826108</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1531443826108</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68835000" />
+    <option name="totallyTimeSpent" value="69352000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -987,6 +986,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="99" column="81" selection-start-line="99" selection-start-column="81" selection-end-line="99" selection-end-column="81" />
+          <folding>
+            <element signature="n#style#0;n#input#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1013,8 +1015,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/admin/member-list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        <state relative-caret-position="608">
+          <caret line="50" column="26" lean-forward="true" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
           <folding>
             <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
