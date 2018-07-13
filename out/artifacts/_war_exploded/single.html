@@ -44,7 +44,7 @@
 		</div>
 		<div class="w3ls_logo_products_left1">
 			<ul class="special_items">
-				<li>Let  Your Something swim<i>/</i></li>
+				<li>Let  Your Something swim</li>
 			</ul>
 		</div>
 		<div class="clearfix"> </div>
@@ -113,6 +113,51 @@
 			</nav>
 		</div>
 		<div class="w3l_banner_nav_right">
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+								&times;
+							</button>
+							<h4 class="modal-title" id="myModalLabel">
+								选择收货地址信息
+							</h4>
+						</div>
+						<div class="modal-body">
+							<form action="" id="nameform">
+								<button type="button" class="btn btn-default dropdown-toggle btn-lg"
+										data-toggle="dropdown">
+									五一广场 <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#">五一广场</a></li>
+									<li><a href="#">太平老街</a></li>
+									<li><a href="#">郁金香酒店</a></li>
+								</ul>
+								<div class="btn-group">
+									<button type="button" class="btn btn-default dropdown-toggle btn-lg"
+											data-toggle="dropdown">
+										345678 <span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu" role="menu">
+										<li><a href="#">45678</a></li>
+										<li><a href="#">456789</a></li>
+										<li><a href="#">4356789</a></li>
+									</ul>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+							</button>
+							<button type="button" class="btn btn-primary">
+								提交更改
+							</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal -->
+			</div>
 			<div class="agileinfo_single">
 				<h5>商品名称</h5>
 				<div class="col-md-4 agileinfo_single_left">
@@ -128,7 +173,11 @@
 							<h4>$21.00</h4>
 						</div>
 						<div class="snipcart-details agileinfo_single_right_details">
-							<button class="btn btn-danger my-cart-btn hvr-sweep-to-right" data-id="76" data-name="Pulao basmati rice" data-summary="summary 76" data-price="21.00" data-quantity="1" data-image="images/76.png">购买</button>
+							<button class="btn btn-danger my-cart-btn hvr-sweep-to-right" data-id="76"
+									data-name="Pulao basmati rice" data-summary="summary 76" data-price="21.00"
+									data-quantity="1" data-image="images/76.png"
+									data-toggle="modal" data-target="#myModal"
+							>购买</button>
 							<button class="btn btn-danger my-cart-btn hvr-sweep-to-right" >收藏</button>
 						</div>
 					</div>

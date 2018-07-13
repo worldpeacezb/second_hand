@@ -17,6 +17,7 @@
 <!-- //font-awesome icons -->
 <!-- js -->
 <script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/copy.js"></script>
 <!-- //js -->
 <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
@@ -131,7 +132,7 @@
 											<h4>$8.00</h4>
 										</div>
 										<div class="snipcart-details">
-											<button class="btn btn-danger my-cart-btn hvr-sweep-to-right" data-id="17" data-name="Dishwash gel, lemon" data-summary="summary 17" data-price="8.00" data-quantity="1" data-image="images/17.png">购买</button>
+											<button class="btn btn-danger my-cart-btn hvr-sweep-to-right" id="17" data-name="Dishwash gel, lemon" data-summary="summary 17" data-price="8.00" data-quantity="1" data-image="images/17.png">购买</button>
 											<button class="btn btn1-danger my-cart-btn1 hvr-sweep-to-right" id="tip" >收藏</button>
 										</div>
 									</div>
@@ -426,5 +427,13 @@ $(document).ready(function(){
 			alert("收藏成功！");
 		};
 	</script>
+<!-- 商品详情模板 -->
+	<script type="text/javascript">
+    $("#17").get(0).onclick = function(){
+        p='<html><head><title>打印</title></head><body><div>'+'要添加的内容'+'</div></body></html>';
+        w=window.open('mirror.html');
+
+    }
+    </script>
 </body>
 </html>

@@ -283,9 +283,6 @@ button,input[type="button"], input[type="submit"] {line-height:normal !important
 img{border:0;vertical-align:middle}
 a img,img{-ms-interpolation-mode:bicubic}
 
-/*IE下a:hover 背景闪烁*/
-*html{overflow:-moz-scrollbars-vertical;zoom:expression(function(ele){ele.style.zoom = "1";document.execCommand("BackgroundImageCache",false,true)}(this))}
-
 /*HTML5 reset*/
 header,footer,section,aside,details,menu,article,section,nav,address,hgroup,figure,figcaption,legend{display:block;margin:0;padding:0}time{display:inline}
 audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
@@ -1814,7 +1811,6 @@ squid.swing.jselect()
 	-o-user-select: none;
 	user-select: none}
 	.select-list {position:absolute;left:0; right:0;top:100%;z-index:1;line-height:34px;max-height:320px; overflow:auto;background-color:#fff;background-clip: padding-box;
-	_height:expression(this.scrollHeight > 319 ? "320px" : "auto");
 	-moz-box-shadow:0 1px 2px rgba(0, 1, 1, 0.2);
 	-webkit-box-shadow:0 1px 2px rgba(0, 1, 1, 0.2);
 	box-shadow:0 1px 2px rgba(0, 1, 1, 0.2);
@@ -3320,7 +3316,6 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 */
 .verticalTab{background:#fff url(../images/verticalTab/tab_bg.png) repeat-y 0 0; width:38px}
 .verticalTab a{position:relative; display:block; width:18px; height:auto; text-align:center; position:relative; padding:26px 10px 6px 10px; background:url(../images/verticalTab/tabNav.png) no-repeat 0 0}
-.verticalTab a em{position:absolute; left:0; bottom:-20px; width:38px; height:20px; background:url(../images/tabNav_right.png) no-repeat 0 0; z-index:50}
 .verticalTab a.active{background-image:url(../images/verticalTab/tabNav-active.png); color:#fff; z-index:99}
 .verticalTab a.active em{background-image:url(../images/verticalTab/tabNav_right-active.png)}
 
@@ -3661,9 +3656,6 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 	.modal-alert-info{padding:30px; text-align:center; font-size:14px; background-color:#fff}
 
 
-.loading{height: 50px; width: 50px; background:#fff url(../images/loading/loading-b.gif) no-repeat center}
-.mask{position:fixed;top:0;left:0;z-index:999;width:100%;height:100%;background-color:rgba(0,0,0,0.7);-moz-transition:all 0.3s ease-in;-webkit-transition:all 0.3s ease-in;-o-transition:all 0.3s ease-in;transition:all 0.3s ease-in}
-* html .mask{position:absolute;left:expression(documentElement.scrollLeft + documentElement.clientWidth - this.offsetWidth);top:expression(documentElement.scrollTop + documentElement.clientHeight - this.offsetHeight)}
 
 .mask_box{background-image:none;display:none;z-index:99}
 .hover .mask_box{position:absolute;bottom:0; left:0;display:block;background-color:rgba(0,0,0,0.3);text-align:left}

@@ -44,7 +44,7 @@
         </div>
         <div class="w3ls_logo_products_left1">
             <ul class="special_items">
-                <li>Let  Your Something swim<i>/</i></li>
+                <li>Let  Your Something swim</li>
             </ul>
         </div>
         <div class="clearfix"> </div>
@@ -118,10 +118,14 @@
                 function showA(obj)
                 {
                     obj.src="src/images/a.jpg";
+                    document.getElementById("text_psw").style.display = "block";
+                    document.getElementById("hide_psw").style.display = "none"
                 }
                 function showB(obj)
                 {
-                    obj.src="src/images/b.jpg"
+                    obj.src="src/images/b.jpg";
+                    document.getElementById("text_psw").style.display = "none";
+                    document.getElementById("hide_psw").style.display = "block"
                 }
             </script>
         </div>
@@ -129,28 +133,14 @@
             <div>邮箱:</div><div>123456789@qq.com</div>
         </div>
         <div id="user_psw">
-            <div>密码:</div><div id="text_psw">12345678</div>
-            <script type="text/javascript">
-                function hide(){
-                    var text = document.getElementById('text_psw'),
-                        pswVal = text.innerHTML;
-                    var newpswVal = '';
-                    if(pswVal.length > 0){
-                        for(var i = 0; i < pswVal.length; i++){
-                            if(i < 3 || i >= pswVal.length-3){
-                                newpswVal += pswVal[i];
-                            }else{
-                                newpswVal += '*';
-                            }
-                        }
-                    }
-                    tel.innerHTML = newpswVal;
-                }
-            </script>
+            <div>密码:</div><div id="text_psw">12345678</div><div id="hide_psw">********</div>
+
             <button type="button" id="button_psw" onclick="none_block()">修改</button>
             <button type="button" id="button_spsw" onclick="block_none()">保存</button>
             <script type="text/javascript">
                 function none_block(){
+                    document.getElementById("hide_psw").style.display = "none"
+                    document.getElementById("text_psw").style.display = "block"
                     var text=document.getElementById("text_psw");
                     var val=text.innerHTML;
                     text.innerHTML="<input style='width: 200px;' type='text' id='n_psw' value="+val+" />";
@@ -164,70 +154,108 @@
                 function block_none(){
                     document.getElementById("button_psw").style.display="block";
                     document.getElementById("button_spsw").style.display="none";
+                    document.getElementById("text_psw").style.display = "none"
+                    document.getElementById("hide_psw").style.display = "block"
                 }
             </script>
         </div>
         <div id="user_address">
             <div>收货地址:</div>
-            <div id="text_address1">13700000000-X省X市X区(县)X街道(乡镇)XX号</div>
-            <div id="text_address2">13800000000-X省X市X区(县)X街道(乡镇)XX号</div>
-            <div id="text_address3">13900000000-X省X市X区(县)X街道(乡镇)XX号</div>
-            <button type="button" id="button_address1" onclick="none_block1()">修改</button>
+            <div id="text_num1">13700000000</div><div id="text_address1">X省X市X区(县)X街道(乡镇)XX号</div>
+            <div id="text_num2">13800000000</div><div id="text_address2">X省X市X区(县)X街道(乡镇)XX号</div>
+            <div id="text_num3">13900000000</div><div id="text_address3">X省X市X区(县)X街道(乡镇)XX号</div>
+            <button type="button" id="button_address1" onclick="none_next1()">修改</button>
+            <button type="button" id="button_naddress1" onclick="next_block1()">继续</button>
             <button type="button" id="button_saddress1" onclick="block_none1()">保存</button>
             <script type="text/javascript">
-                function none_block1(){
+                function none_next1() {
+                    var text = document.getElementById("text_num1");
+                    var val = text.innerHTML;
+                    text.innerHTML = "<input style='width:130px' type='text' id='n_num1' value=" + val + " />";
+                    document.getElementById("n_num1").focus();
+                    document.getElementById("n_num1").addEventListener("blur", function (e) {
+                        text.innerHTML = document.getElementById("n_num1").value;
+                    });
+                    document.getElementById("button_address1").style.display = "none";
+                    document.getElementById("button_naddress1").style.display = "block";
+                }
+                function next_block1(){
                     var text=document.getElementById("text_address1");
                     var val=text.innerHTML;
-                    text.innerHTML="<input style='width:500px' type='text' id='n_address1' value="+val+" />";
+                    text.innerHTML="<input style='width:370px' type='text' id='n_address1' value="+val+" />";
                     document.getElementById("n_address1").focus();
                     document.getElementById("n_address1").addEventListener("blur",function(e){
                         text.innerHTML=document.getElementById("n_address1").value;
                     });
-                    document.getElementById("button_address1").style.display="none";
+                    document.getElementById("button_naddress1").style.display="none";
                     document.getElementById("button_saddress1").style.display="block";
                 };
                 function block_none1(){
                     document.getElementById("button_address1").style.display="block";
                     document.getElementById("button_saddress1").style.display="none";
-                };
+                }
             </script>
-            <button type="button" id="button_address2" onclick="none_block2()">修改</button>
+            <button type="button" id="button_address2" onclick="none_next2()">修改</button>
+            <button type="button" id="button_naddress2" onclick="next_block2()">继续</button>
             <button type="button" id="button_saddress2" onclick="block_none2()">保存</button>
             <script type="text/javascript">
-                function none_block2(){
+                function none_next2(){
+                    var text=document.getElementById("text_num2");
+                    var val=text.innerHTML;
+                    text.innerHTML="<input style='width:130px' type='text' id='n_num2' value="+val+" />";
+                    document.getElementById("n_num2").focus();
+                    document.getElementById("n_num2").addEventListener("blur",function(e){
+                        text.innerHTML=document.getElementById("n_num2").value;
+                    });
+                    document.getElementById("button_address2").style.display="none";
+                    document.getElementById("button_naddress2").style.display="block";
+                }
+                function next_block2(){
                     var text=document.getElementById("text_address2");
                     var val=text.innerHTML;
-                    text.innerHTML="<input style='width:500px' type='text' id='n_address2' value="+val+" />";
+                    text.innerHTML="<input style='width:370px' type='text' id='n_address2' value="+val+" />";
                     document.getElementById("n_address2").focus();
                     document.getElementById("n_address2").addEventListener("blur",function(e){
                         text.innerHTML=document.getElementById("n_address2").value;
                     });
-                    document.getElementById("button_address2").style.display="none";
+                    document.getElementById("button_naddress2").style.display="none";
                     document.getElementById("button_saddress2").style.display="block";
                 };
                 function block_none2(){
                     document.getElementById("button_address2").style.display="block";
                     document.getElementById("button_saddress2").style.display="none";
-                };
+                }
             </script>
-            <button type="button" id="button_address3" onclick="none_block3()">修改</button>
+            <button type="button" id="button_address3" onclick="none_next3()">修改</button>
+            <button type="button" id="button_naddress3" onclick="next_block3()">继续</button>
             <button type="button" id="button_saddress3" onclick="block_none3()">保存</button>
             <script type="text/javascript">
-                function none_block3(){
+                function none_next3(){
+                    var text=document.getElementById("text_num3");
+                    var val=text.innerHTML;
+                    text.innerHTML="<input style='width:130px' type='text' id='n_num3' value="+val+" />";
+                    document.getElementById("n_num3").focus();
+                    document.getElementById("n_num3").addEventListener("blur",function(e){
+                        text.innerHTML=document.getElementById("n_num3").value;
+                    });
+                    document.getElementById("button_address3").style.display="none";
+                    document.getElementById("button_naddress3").style.display="block";
+                }
+                function next_block3(){
                     var text=document.getElementById("text_address3");
                     var val=text.innerHTML;
-                    text.innerHTML="<input style='width:500px' type='text' id='n_address3' value="+val+" />";
+                    text.innerHTML="<input style='width:370px' type='text' id='n_address3' value="+val+" />";
                     document.getElementById("n_address3").focus();
                     document.getElementById("n_address3").addEventListener("blur",function(e){
                         text.innerHTML=document.getElementById("n_address3").value;
                     });
-                    document.getElementById("button_address3").style.display="none";
+                    document.getElementById("button_naddress3").style.display="none";
                     document.getElementById("button_saddress3").style.display="block";
-                };
+                }
                 function block_none3(){
                     document.getElementById("button_address3").style.display="block";
                     document.getElementById("button_saddress3").style.display="none";
-                };
+                }
             </script>
         </div>
     </div>
