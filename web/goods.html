@@ -132,9 +132,13 @@
                 formDiv+="<div>商品价格:</div><input type='text' id='good_prise' /><br>";
                 formDiv+="<div>商品图片:</div><input type='text' id='good_pic_name' disabled style='background-color: #D3D4D3'/><input type='file' onchange='showname()' id='good_pic' style='width:80px'/>";
                 formDiv+="<div style='margin-left: 200px;margin-top: -150px'>商品描述:</div><textarea type='text' id='good_info' style='width:200px ;height: 100px ;margin-left: 200px'></textarea><br><br><br><br>";
-                formDiv+="<input type='submit' value='提交' onclick='hide()' /></form>";
+                formDiv+="<input type='submit' value='提交' onclick='hide()' />"
+				formDiv+="<input type='submit' value='取消' onclick='give_up()' /></form>";
                 document.getElementById("pic").innerHTML=formDiv;
                 document.getElementById("good_name").focus();
+            }
+            function give_up() {
+                document.getElementById("pic").style.visibility="hidden";
             }
             function hide(){
                 var text1=document.getElementById("good_name").value;
