@@ -145,7 +145,7 @@
                     var val=text.innerHTML;
                     text.innerHTML="<input style='width: 200px;' type='text' id='n_psw' value="+val+" />";
                     document.getElementById("n_psw").focus();
-                    document.getElementById("n_psw").addEventListener("blur",function(e){
+                    document.getElementById("n_psw").addEventListener("blur",function(){
                         text.innerHTML=document.getElementById("n_psw").value;
                     });
                     document.getElementById("button_psw").style.display="none";
