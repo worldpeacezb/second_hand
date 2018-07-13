@@ -115,29 +115,78 @@
     </div>
     <div class="w3l_banner_nav_right">
         <div class="agileinfo_single">
-            <h5>商品名称</h5>
+            <h5 id="g_name">肥宅快乐梦</h5>
             <div class="col-md-4 agileinfo_single_left">
                 <img id="example" src="src/images/74.jpg" alt=" " class="img-responsive" />
             </div>
             <div class="col-md-8 agileinfo_single_right">
-                <div class="w3agile_description">
-                    <h4>商品详情 :</h4>
-                        <script type="text/template" class="nav-tmpl">
-                            <ul>
-                                <p>
-                                    <%= iii%>
-                                </p>
-                            </ul>
-                        </script>
-                </div>
                 <div class="snipcart-item block">
                     <div class="snipcart-thumb agileinfo_single_right_snipcart">
-                        <h4>$21.00</h4>
-                    </div>
-                    <div class="snipcart-details agileinfo_single_right_details">
-                        <button class="btn btn-danger my-cart-btn hvr-sweep-to-right" data-id="74" data-name="Pulao basmati rice" data-summary="summary 74" data-price="21.00" data-quantity="1" data-image="images/74.jpg">修 改</button>
+                        <h4 id="g_prise">100000.00</h4>
                     </div>
                 </div>
+                <div class="w3agile_description">
+                    <h4>商品详情 :</h4><h4 id="g_desc">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</h4>
+                    <script type="text/template" class="nav-tmpl">
+                        <ul>
+                            <p>
+                                <%= iii%>
+                            </p>
+                        </ul>
+                    </script>
+                </div>
+                <div class="snipcart-details agileinfo_single_right_details">
+                    <button onclick="change()" id="change" class="btn btn-danger my-cart-btn hvr-sweep-to-right" data-id="74" data-name="Pulao basmati rice" data-summary="summary 74" data-price="21.00" data-quantity="1" data-image="images/74.jpg">修 改</button>
+                    <button style="display: none" onclick="change_next1()" id="change_next1" class="btn btn-danger my-cart-btn hvr-sweep-to-right" data-id="74" data-name="Pulao basmati rice" data-summary="summary 74" data-price="21.00" data-quantity="1" data-image="images/74.jpg">继 续</button>
+                    <button style="display: none" onclick="change_next2()" id="change_next2" class="btn btn-danger my-cart-btn hvr-sweep-to-right" data-id="74" data-name="Pulao basmati rice" data-summary="summary 74" data-price="21.00" data-quantity="1" data-image="images/74.jpg">继 续</button>
+                    <button style="display: none" onclick="change_next3()" id="change_next3" class="btn btn-danger my-cart-btn hvr-sweep-to-right" data-id="74" data-name="Pulao basmati rice" data-summary="summary 74" data-price="21.00" data-quantity="1" data-image="images/74.jpg">完 成</button>
+                </div>
+                <script>
+                    function change() {
+                        var text = document.getElementById("g_name");
+                        var val = text.innerHTML;
+                        text.innerHTML = "<input style='width:150px' type='text' id='g_num' value=" + val + " />";
+                        document.getElementById("g_num").focus();
+                        document.getElementById("change").style.display = "none";
+                        document.getElementById("change_next1").style.display = "block";
+                    }
+                    function change_next1() {
+                        if(document.getElementById("g_num").value==""){
+                            alert("名称不能为空！");
+                            return false;
+                        }
+                        document.getElementById("g_name").innerHTML = document.getElementById("g_num").value;
+                        var text = document.getElementById("g_prise");
+                        var val = text.innerHTML;
+                        text.innerHTML = "<input style='width:150px' type='text' id='p_num' value=" + val + " />";
+                        document.getElementById("p_num").focus();
+                        document.getElementById("change_next1").style.display = "none";
+                        document.getElementById("change_next2").style.display = "block";
+                    }
+                    function change_next2() {
+                        if(document.getElementById("p_num").value==""){
+                            alert("价格不能为空！");
+                            return false;
+                        }
+                        document.getElementById("g_prise").innerHTML = document.getElementById("p_num").value;
+                        var text = document.getElementById("g_desc");
+                        var val = text.innerHTML;
+                        text.innerHTML = "<textarea style='width:300px;height: 150px' type='text' id='d_num' >" + val + "</textarea>";
+                        document.getElementById("d_num").focus();
+                        document.getElementById("d_num").addEventListener("blur", function () {
+                            text.innerHTML = document.getElementById("p_num").value;
+                        });
+                        document.getElementById("change_next2").style.display = "none";
+                        document.getElementById("change_next3").style.display = "block";
+                    }
+                    function change_next3() {
+                        if(document.getElementById("d_num").value=="")
+                            document.getElementById("g_desc").innerHTML ="无";
+                        else document.getElementById("g_desc").innerHTML = document.getElementById("d_num").value;
+                        document.getElementById("change_next3").style.display = "none";
+                        document.getElementById("change").style.display = "block";
+                    }
+                </script>
             </div>
             <div class="clearfix"> </div>
         </div>
