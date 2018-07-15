@@ -139,8 +139,15 @@
                     <button style="display: none" onclick="change_next1()" id="change_next1" class="btn btn-danger my-cart-btn hvr-sweep-to-right" data-id="74" data-name="Pulao basmati rice" data-summary="summary 74" data-price="21.00" data-quantity="1" data-image="images/74.jpg">继 续</button>
                     <button style="display: none" onclick="change_next2()" id="change_next2" class="btn btn-danger my-cart-btn hvr-sweep-to-right" data-id="74" data-name="Pulao basmati rice" data-summary="summary 74" data-price="21.00" data-quantity="1" data-image="images/74.jpg">继 续</button>
                     <button style="display: none" onclick="change_next3()" id="change_next3" class="btn btn-danger my-cart-btn hvr-sweep-to-right" data-id="74" data-name="Pulao basmati rice" data-summary="summary 74" data-price="21.00" data-quantity="1" data-image="images/74.jpg">完 成</button>
+                    <button onclick="good_delete()" id="delete" class="btn btn-danger my-cart-btn hvr-sweep-to-right" data-id="74" data-name="Pulao basmati rice" data-summary="summary 74" data-price="21.00" data-quantity="1" data-image="images/74.jpg">删 除</button>
                 </div>
                 <script>
+                    function good_delete() {
+                        var gd = window.confirm("确定删除？");
+                        if (gd!=0){
+                            window.location.href=("goods.html");
+                        }
+                    }
                     function change() {
                         var text = document.getElementById("g_name");
                         var val = text.innerHTML;

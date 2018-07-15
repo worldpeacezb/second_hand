@@ -113,8 +113,28 @@
     <div class="w3l_banner_nav_right">
         <div class="page-container">
             <div class="text-c">
-                <input type="text" name="" id="placeholder"  style="width:250px" class="input-text">
-                <button name="" id="" class="btn btn-success" type="submit">搜索</button>
+                <input type="text" id="placeholder"  style="width:250px" class="input-text">
+                <button id="search_order" onclick="search_order()" class="btn btn-success" type="submit">搜索</button>
+                <script>
+                    function search_order() {
+                        var text = document.getElementById("placeholder");
+                        var tab = document.getElementById("DataTables_Table_0");
+                        var tr = tab.getElementsByTagName("tr");
+                        var i,j,td;
+                        for(i=0;i<tr.length;i++) {
+                            for (j = 3; j < 7; j++) {
+                                td = tr[i].getElementsByTagName("td")[j];
+                                if (td) {
+                                    if (td.innerHTML.indexOf(text.value) > -1) {
+                                        tr[i].style.display = "";
+                                        break;
+                                    }
+                                    else tr[i].style.display = "none";
+                                }
+                            }
+                        }
+                    }
+                </script>
             </div>
             <div class="cl pd-5 bg-1 bk-gray mt-20">
                 <span class="r">共有数据：<strong>54</strong> 条</span>
@@ -122,7 +142,6 @@
             <div class="mt-20">
                 <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper no-footer">
                     <table class="table table-border table-bordered table-bg table-hover table-sort dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
-                        <thead>
                         <tr class="text-c" role="row">
                             <th width="40" class="sorting_disabled" rowspan="1" colspan="1" aria-label="" style="width: 40px;">
                                 <input name="" type="checkbox" value="">
@@ -135,8 +154,8 @@
                             <th width="100" class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="价格: 升序排列" style="width: 100px;">价格</th>
                             <th width="60" class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="发布状态: 升序排列" style="width: 60px;">我的身份</th>
                             <th width="100" class="sorting_disabled" rowspan="1" colspan="1" aria-label="操作" style="width: 72px;">操作</th>
-                        </thead>
-                        <tbody  id="table_body"><button onclick="add_order()">a</button>
+                        </tr>
+                        <button onclick="add_order()">a</button><button type="button" onclick="show_all()" class="btn btn-success">全部</button><span> </span><button type="button" onclick="hide_seller()" class="btn btn-success">买家</button><span> </span><button type="button" onclick="hide_buyer()" class="btn btn-success">卖家</button>
                         <tr class="text-c va-m odd" role="row">
                             <td><input name="" type="checkbox" value=""></td>
                             <td class="sorting_1">1</td>
@@ -150,12 +169,65 @@
                             <td class="text-name">XXX</td>
                             <td class="text-address">13900000000-X省X市X区(县)X街道(乡镇)X号</td>
                             <td><span class="text-price">356.00</span>元</td>
-                            <td class="td-status"><span class="label label-success radius">卖家</span></td>
-                            <td class="td-manage"><span class="Hui-iconfont">发货</span></td>
+                            <td class="td-status">卖家</td>
+                            <td class="td-manage"><button class="Hui-iconfont">发货</button></td>
+                        </tr>
+                        <tr class="text-c va-m odd" role="row">
+                            <td><input name="" type="checkbox" value=""></td>
+                            <td class="sorting_1">1</td>
+                            <td>
+                                <a onclick="product_show('哥本哈根橡木地板','product-show.html','10001')" href="javascript:;">	<img width="60" class="product-thumb" src="src/images/9.jpg">
+                                </a>
+                            </td>
+                            <td class="text-good">
+                                <a style="text-decoration:none" onclick="product_show('哥本哈根橡木门框','product-show.html','10001')" href="javascript:;">哥本哈根橡木门框KS8373</a>
+                            </td>
+                            <td class="text-name">XX</td>
+                            <td class="text-address">13700000000-X省X市X区(县)X街道(乡镇)X号</td>
+                            <td><span class="text-price">456.00</span>元</td>
+                            <td class="td-status">买家</td>
+                            <td class="td-manage"><button class="Hui-iconfont">收货</button></td>
                         </tr>
                         <script>
+                            function show_all(){
+                                var tab = document.getElementById("DataTables_Table_0");
+                                var tr = tab.getElementsByTagName("tr");
+                                var i,td;
+                                for(i=0;i<tr.length;i++){
+                                    td = tr[i].getElementsByTagName("td")[7];
+                                    if(td) {
+                                        tr[i].style.display = "";
+                                    }
+                                }
+                            }
+                            function hide_buyer(){
+                                var tab = document.getElementById("DataTables_Table_0");
+                                var tr = tab.getElementsByTagName("tr");
+                                var i,td,filter="买家";
+                                for(i=0;i<tr.length;i++){
+                                    td = tr[i].getElementsByTagName("td")[7];
+                                    if(td) {
+                                        if (td.innerHTML.indexOf(filter) > -1)
+                                            tr[i].style.display = "none";
+                                        else tr[i].style.display = "";
+                                    }
+                                }
+                            }
+                            function hide_seller(){
+                                var tab = document.getElementById("DataTables_Table_0");
+                                var tr = tab.getElementsByTagName("tr");
+                                var i,td,filter="卖家";
+                                for(i=0;i<tr.length;i++){
+                                    td = tr[i].getElementsByTagName("td")[7];
+                                    if(td) {
+                                        if (td.innerHTML.indexOf(filter) > -1)
+                                            tr[i].style.display = "none";
+                                        else tr[i].style.display = "";
+                                    }
+                                }
+                            }
                             function add_order(){
-                                var tbody = document.getElementById("table_body");
+                                var tbody = document.getElementById("DataTables_Table_0");
                                 tbody.innerHTML += "<tr class=\"text-c va-m odd\" role=\"row\">"+
                                     "<td><input name=\'\' type=\'checkbox\' value=\'\'></td>"+
                                     "<td class=\'sorting_1\'>1</td>"+
@@ -164,8 +236,8 @@
                                     "<td class=\"text-name\">XXX</td>"+
                                     "<td class=\"text-address\">13900000000-X省X市X区(县)X街道(乡镇)X号</td>"+
                                     "<td><span class=\"text-price\">356.00</span>元</td>"+
-                                    "<td class=\"td-status\"><span class=\"label label-success radius\">卖家</span></td>"+
-                                    "<td class=\"td-manage\"><span class=\"Hui-iconfont\">发货</span></td></tr>";
+                                    "<td class=\"td-status\">卖家</td>"+
+                                    "<td class=\"td-manage\"><button class=\"Hui-iconfont\">发货</button></td></tr>";
                             }
                         </script>
                         </tbody>
