@@ -57,7 +57,7 @@
 	<div class="w3l_search">
 		<form action="#" method="post">
 			<input type="text" name="Product" value="搜索商品..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '搜索商品...';}" required="">
-			<input type="submit" value="查 询">
+			<input type="submit" id="testAjax" value="查 询">
 		</form>
 	</div>
 	<div class="w3l_header_right1">
@@ -117,21 +117,21 @@
 				 </div><!-- /.navbar-collapse -->
 			</nav>
 		</div>
-		<div class="w3l_banner_nav_right">
-			<div class="w3ls_w3l_banner_nav_right_grid w3ls_w3l_banner_nav_right_grid_sub">
-				<div class="w3ls_w3l_banner_nav_right_grid1">
-					<div class="col-md-3 w3ls_w3l_banner_left">
-						<div class="hover14 column">
-						<div class="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
-							<div class="agile_top_brand_left_grid1">
+		<div class="w3l_banner_nav_right" id="text" >
+			<div class="w3ls_w3l_banner_nav_right_grid w3ls_w3l_banner_nav_right_grid_sub" id="banner">
+				<div class="w3ls_w3l_banner_nav_right_grid1" id="one">
+					<div class="col-md-3 w3ls_w3l_banner_left" id="two">
+						<div class="hover14 column" id=three">
+						<div class="agile_top_brand_left_grid w3l_agile_top_brand_left_grid" id="four">
+							<div class="agile_top_brand_left_grid1" id="five">
 								<figure>
-									<div class="snipcart-item block">
-										<div class="snipcart-thumb">
+									<div class="snipcart-item block" id="six">
+										<div class="snipcart-thumb" id="seven">
 											<a href="single.html"><img src="src/images/4.jpg" alt=" " class="img-responsive" /></a>
 											<p>dishwash gel, lemon  (1.5 ltr)</p>
 											<h4>$8.00</h4>
 										</div>
-										<div class="snipcart-details">
+										<div class="snipcart-details" id="eight">
 											<button class="btn btn-danger my-cart-btn hvr-sweep-to-right" id="17" data-name="Dishwash gel, lemon" data-summary="summary 17" data-price="8.00" data-quantity="1" data-image="images/17.png">购买</button>
 											<button class="btn btn1-danger my-cart-btn1 hvr-sweep-to-right" id="collect" onclick="collect()	" >收藏</button>
 											<button class="btn btn-danger my-cart-btn2 " style="margin-left: 10%" id="no_collect" onclick="no_collect()">取消收藏</button>
@@ -378,9 +378,14 @@
 							</div>
 						</div>
 						</div>
+						<button onclick="creatdiv()">CLICK ME!</button>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
+			</div>
+		</div>
+		<div class="w3l_banner_nav_right" id="dvelopment" >
+			<div class="w3ls_w3l_banner_nav_right_grid w3ls_w3l_banner_nav_right_grid_sub" id="banner1">
 			</div>
 		</div>
 		<div class="clearfix"></div>
@@ -478,7 +483,9 @@ $(document).ready(function(){
         alert("取消成功！");
         document.getElementById("collect").style.display = "block";
         document.getElementById("no_collect").style.display = "none";
+
     };
 </script>
+
 </body>
 </html>
