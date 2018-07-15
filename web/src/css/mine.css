@@ -228,20 +228,6 @@
 #user_text{
 	font-size: 30px;
 }
-#button_good{
-	font-size: 14px;
-	color: #fff;
-	background: #A9A9A9;
-	text-decoration: none;
-	position: relative;
-	border: none;
-	border-radius: 0;
-	width: 60px;
-	text-transform: uppercase;
-	padding: .5em 0;
-	float: left;
-	margin-left: 65px;
-}
 #button_ugood{
 	font-size: 14px;
 	color: #fff;
@@ -254,21 +240,6 @@
 	text-transform: uppercase;
 	padding: .5em 0;
 	float: left;
-}
-#button_sgood{
-	font-size: 14px;
-	display: none;
-	color: #fff;
-	background: #A9A9A9;
-	text-decoration: none;
-	position: relative;
-	border: none;
-	border-radius: 0;
-	width: 60px;
-	text-transform: uppercase;
-	padding: .5em 0;
-	float: left;
-	margin-left: 65px;
 }
 #good_text{
 	font-size: 30px;
