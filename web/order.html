@@ -170,7 +170,7 @@
                             <td class="text-address">13900000000-X省X市X区(县)X街道(乡镇)X号</td>
                             <td><span class="text-price">356.00</span>元</td>
                             <td class="td-status">卖家</td>
-                            <td class="td-manage"><button class="Hui-iconfont">发货</button></td>
+                            <td class="td-manage"><button id="order1" onclick="change_status(this)" class="Hui-iconfont">发货</button><div id="order1_" style="display: none">已完成</div></td>
                         </tr>
                         <tr class="text-c va-m odd" role="row">
                             <td><input name="" type="checkbox" value=""></td>
@@ -186,9 +186,14 @@
                             <td class="text-address">13700000000-X省X市X区(县)X街道(乡镇)X号</td>
                             <td><span class="text-price">456.00</span>元</td>
                             <td class="td-status">买家</td>
-                            <td class="td-manage"><button class="Hui-iconfont">收货</button></td>
+                            <td class="td-manage"><button id="order2" onclick="change_status(this)" class="Hui-iconfont">收货</button><div id="order2_" style="display: none">已完成</div></td>
                         </tr>
                         <script>
+                            function change_status(a) {
+                                a.style.display = "none";
+                                var d = document.getElementById(a.id+"_");
+                                d.style.display="block";
+                            }
                             function show_all(){
                                 var tab = document.getElementById("DataTables_Table_0");
                                 var tr = tab.getElementsByTagName("tr");
