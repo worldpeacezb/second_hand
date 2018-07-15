@@ -8,9 +8,13 @@ function creat(t_s){
     div1.appendChild(div2);
     document.body.appendChild(div1);
 }
+var i = 0;
 //创建新的商品栏
 function creatdiv() {
     var surprise = document.getElementById('banner');
+    var clear = document.createElement("div");
+    clear.innerHTML += "<div class=\"clearfix\"> </div>";
+
     surprise.innerHTML += "<div class=\"w3ls_w3l_banner_nav_right_grid1\">\n" +
         "<div class=\"col-md-3 w3ls_w3l_banner_left\">\n" +
         "<div class=\"hover14 column\">\n" +
@@ -35,6 +39,12 @@ function creatdiv() {
         "</div>\n" +
         "</div>\n" +
         "</div>";
+    i++;
+    while(i % 4 == 0)
+    {
+        surprise.appendChild(clear);
+        break;
+    }
 
 }
     /*
