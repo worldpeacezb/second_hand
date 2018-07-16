@@ -17,6 +17,7 @@
     <link href="src/css/mine.css" rel="stylesheet" type="text/css" media="all" />
     <!-- js -->
     <script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/copy.js"></script>
     <!-- //js -->
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
@@ -149,77 +150,13 @@
                 document.getElementById("pic").style.visibility="hidden";
                 return true;
             }
-            function none_block4(){
-                /*var text=document.getElementById("text_address3");
-                var val=text.innerHTML;
-                text.innerHTML="<input style='width:750px' type='text' id='n_address3' value="+val+" />";
-                document.getElementById("n_address3").addEventListener("blur",function(e){
-                text.innerHTML=document.getElementById("n_address3").value;
-                });*/
-                document.getElementById("button_good").style.display="none";
-                document.getElementById("button_sgood").style.display="block";
-            }
-            function block_none4(){
-                document.getElementById("button_good").style.display="block";
-                document.getElementById("button_sgood").style.display="none";
-            }
 		</script>
-		<div class="w3ls_w3l_banner_nav_right_grid w3ls_w3l_banner_nav_right_grid_sub">
-			<div class="w3ls_w3l_banner_nav_right_grid1">
-				<div class="col-md-3 w3ls_w3l_banner_left">
-					<div class="hover14 column">
-						<div class="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
-							<div class="agile_top_brand_left_grid1">
-								<figure>
-									<div class="snipcart-item block">
-										<div class="snipcart-thumb">
-											<a href="mirror.html"><img src="src/images/1.jpg" alt=" " class="img-responsive" /></a>
-											<p>chicken in jelly can (400 gm)</p>
-											<h4>$7.00</h4>
-										</div>
-										<div class="snipcart-details">
-											<a href="mirror.html"><button class="btn btn-danger my-cart-btn hvr-sweep-to-right"
-																		  data-id="28" data-name="Chicken in jelly can" data-summary="summary 28"
-																		  data-price="7.00" data-quantity="1"
-																		  data-image="src/images/18.png"
-																		  style="margin-left: 30%"
-											>商品详情</button></a>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 w3ls_w3l_banner_left">
-					<div class="hover14 column">
-						<div class="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
-							<div class="agile_top_brand_left_grid1">
-								<figure>
-									<div class="snipcart-item block">
-										<div class="snipcart-thumb">
-											<a href="mirror.html"><img src="src/images/1.jpg" alt=" " class="img-responsive" /></a>
-											<p>chicken in jelly can (400 gm)</p>
-											<h4>$7.00</h4>
-										</div>
-										<div class="snipcart-details">
-											<a href="mirror.html"><button class="btn btn-danger my-cart-btn hvr-sweep-to-right"
-																		  data-id="28" data-name="Chicken in jelly can" data-summary="summary 28"
-																		  data-price="7.00" data-quantity="1"
-																		  data-image="src/images/18.png"
-																		  style="margin-left: 30%"
-											>商品详情</button></a>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
+		<div class="w3ls_w3l_banner_nav_right_grid w3ls_w3l_banner_nav_right_grid_sub" id="goods_container"></div>
+		<div class="clearfix"> </div>
 	</div>
+</div>
+<div>
+	<input type="button"  onclick="creatdiv_goods()" name="1s" id="1s" value="CLICK ME" addval = "">
 </div>
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>

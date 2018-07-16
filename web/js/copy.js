@@ -1,5 +1,6 @@
 
 var i = 0;
+var j = 0;
 //创建新的商品栏
 function creatdiv_total() {
     var surprise = document.getElementById('banner');
@@ -32,6 +33,37 @@ function creatdiv_total() {
         "</div>";
     i++;
     while(i % 4 == 0)
+    {
+        surprise.appendChild(clear);
+        break;
+    }
+}
+function creatdiv_goods(){
+    var surprise = document.getElementById('goods_container');
+    var clear = document.createElement("div");
+    clear.innerHTML += "<div class=\"clearfix\"> </div>";
+
+    surprise.innerHTML += "<div class=\"w3ls_w3l_banner_nav_right_grid1\">\n" +
+        "<div class=\"col-md-3 w3ls_w3l_banner_left\">\n" +
+        "<div class=\"hover14 column\">\n" +
+        "<div class=\"agile_top_brand_left_grid w3l_agile_top_brand_left_grid\">\n" +
+        "<div class=\"agile_top_brand_left_grid1\">\n" +
+        "\<figure>\n" +
+        "<div class=\"snipcart-item block\">\n" +
+        "<div class=\"snipcart-thumb\">\n" +
+        "<a href=\"single.html\"><img src=\"src/images/4.jpg\" alt=\" \" class=\"img-responsive\" /></a>\n" +
+        "<p>dishwash gel, lemon  (1.5 ltr)</p>\n" +
+        "<h4>$8.00</h4>\n" +
+        "</div>\n" +
+        "<div class=\"snipcart-details\"> <a href=\"mirror.html\"><button class=\"btn btn-danger my-cart-btn hvr-sweep-to-right\" data-id=\"28\" data-name=\"Chicken in jelly can\" data-summary=\"summary 28\"data-price=\"7.00\" data-quantity=\"1\"data-image=\"src/images/18.png\"style=\"margin-left: 30%\" >商品详情</button></a> </div>" +
+        "</div>\n" +
+        "</figure>\n" +
+        "</div>\n" +
+        "</div>\n" +
+        "</div>\n" +
+        "</div></div>";
+    j++;
+    while(j % 4 == 0)
     {
         surprise.appendChild(clear);
         break;
