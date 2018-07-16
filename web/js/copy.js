@@ -1,6 +1,7 @@
 
 var i = 0;
 var j = 0;
+var k = 0;
 //创建新的商品栏
 function creatdiv_total() {
     var surprise = document.getElementById('banner');
@@ -51,7 +52,7 @@ function creatdiv_goods(){
         "<div class=\"hover14 column\">\n" +
         "<div class=\"agile_top_brand_left_grid w3l_agile_top_brand_left_grid\">\n" +
         "<div class=\"agile_top_brand_left_grid1\">\n" +
-        "\<figure>\n" +
+        "<figure>\n" +
         "<div class=\"snipcart-item block\">\n" +
         "<div class=\"snipcart-thumb\">\n" +
         "<a href=\"single.html\"><img src=\"src/images/4.jpg\" alt=\" \" class=\"img-responsive\" /></a>\n" +
@@ -67,6 +68,33 @@ function creatdiv_goods(){
         "</div></div>";
     j++;
     while(j % 4 == 0)
+    {
+        surprise.appendChild(clear);
+        break;
+    }
+}
+
+function creatdiv_collect(){
+    var surprise = document.getElementById('collect_container');
+    var clear = document.createElement("div");
+    clear.innerHTML += "<div class=\"clearfix\"> </div>";
+
+    surprise.innerHTML += "<div class=\"w3ls_w3l_banner_nav_right_grid1\">"+
+                          "<div class=\"col-md-3 w3ls_w3l_banner_left\">"+
+                          "<div class=\"hover14 column\">"+
+                          "<div class=\"agile_top_brand_left_grid w3l_agile_top_brand_left_grid\">"+
+                          "<div class=\"agile_top_brand_left_grid1\">"+
+                          "<figure>"+
+                          "<div class=\"snipcart-item block\">"+
+                          "<div class=\"snipcart-thumb\">"+
+                          "<a href=\"single.html\"><img src=\"src/images/17.jpg\" alt=\" \" class=\"img-responsive\" /></a>"+
+                          "<p>food for adult dogs (80 gms)</p>"+
+                          "<h4>$3.00</h4></div>"+
+                          "<div class=\"snipcart-details\">"+
+                          "<button class=\"btn btn-danger my-cart-btn hvr-sweep-to-right\" data-id=\"25\" data-name=\"Food for adult dogs\" data-summary=\"summary 25\" data-price=\"3.00\" data-quantity=\"1\" data-image=\"images/25.png\"data-toggle=\"modal\" data-target=\"#myModal\"style=\"margin-left: 30%\" >购买</button>"+
+                          "</div> </div> </figure> </div> </div> </div> </div>";
+    k++;
+    while(k % 4 == 0)
     {
         surprise.appendChild(clear);
         break;
