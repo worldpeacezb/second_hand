@@ -18,6 +18,7 @@
     <!-- js -->
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/copy.js"></script>
+    <script src="js/search.js"></script>
     <!-- //js -->
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
@@ -55,16 +56,10 @@
         <a href="index.html">二手交易市场！</a>
     </div>
     <div class="w3l_search">
-        <form name="search" id="search" action="search.html" method="post">
-            <input class="search" type="text" name="Product" value="搜索商品..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '搜索商品...';}" required="">
-            <input type="submit" id="testAjax" value="查 询">
+        <form name="search" id="search" action="#" method="post">
+            <input class="search" id="search_data" type="text" name="Product"  value="搜索商品..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '搜索商品...';}" required="">
+            <input  type="submit" id="text_text" value="查 询">
         </form>
-        <script>
-            $("#testAjax").click(function(){
-                document.search.action="search.html";
-                document.search.submit();
-            })
-        </script>
     </div>
     <div class="w3l_header_right1">
         <ul>
@@ -125,6 +120,14 @@
     </div>
     <div class="w3l_banner_nav_right" id="text" >
         <div class="w3ls_w3l_banner_nav_right_grid w3ls_w3l_banner_nav_right_grid_sub" id="banner">
+            <script>
+                var search_text
+                $("#text_text").click(function(){
+                    search_text = document.getElementById("search_data").value;
+                    alert(search_text);
+                    search();
+                })
+            </script>
         </div>
     </div>
     <div class="clearfix"></div>
@@ -133,7 +136,7 @@
 <!-- footer -->
 <div class="footer">
     <input type="button"  onclick="creatdiv_search()"  value="CLICK ME" >
-    <input type="button"  onclick="ryne()"value="CLICK ME 2 !" >
+    <input type="button"  onclick="total_total()"value="CLICK ME 2 !" >
 </div>
 <!-- //footer -->
 <!-- Bootstrap Core JavaScript -->
