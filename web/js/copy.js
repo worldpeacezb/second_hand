@@ -72,6 +72,7 @@ function creatdiv_goods(){
         surprise.appendChild(clear);
         break;
     }
+
 }
 
 function creatdiv_collect(){
