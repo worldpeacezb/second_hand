@@ -124,3 +124,9 @@ function creatdiv_search() {
         break;
     }
 }
+
+//遍历显示所有商品
+function total_total()
+{
+
+}

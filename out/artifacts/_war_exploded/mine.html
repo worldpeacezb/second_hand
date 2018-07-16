@@ -145,17 +145,20 @@
                     var val=text.innerHTML;
                     text.innerHTML="<input style='width: 200px;' type='text' id='n_psw' value="+val+" />";
                     document.getElementById("n_psw").focus();
-                    document.getElementById("n_psw").addEventListener("blur",function(){
-                        text.innerHTML=document.getElementById("n_psw").value;
-                    });
                     document.getElementById("button_psw").style.display="none";
                     document.getElementById("button_spsw").style.display="block";
                 };
                 function block_none(){
+                    if(document.getElementById("n_psw").value==""){
+                        alert("密码不能为空！");
+                        return false;
+                    }
+                    document.getElementById("text_psw").innerHTML=document.getElementById("n_psw").value;
                     document.getElementById("button_psw").style.display="block";
                     document.getElementById("button_spsw").style.display="none";
                     document.getElementById("text_psw").style.display = "none"
                     document.getElementById("hide_psw").style.display = "block"
+                    return true;
                 }
             </script>
         </div>
@@ -173,24 +176,28 @@
                     var val = text.innerHTML;
                     text.innerHTML = "<input style='width:130px' type='text' id='n_num1' value=" + val + " />";
                     document.getElementById("n_num1").focus();
-                    document.getElementById("n_num1").addEventListener("blur", function (e) {
-                        text.innerHTML = document.getElementById("n_num1").value;
-                    });
                     document.getElementById("button_address1").style.display = "none";
                     document.getElementById("button_naddress1").style.display = "block";
                 }
                 function next_block1(){
+                    if(document.getElementById("n_num1").value==""){
+                        alert("默认电话不能为空！");
+                        return false;
+                    }
+                    document.getElementById("text_num1").innerHTML = document.getElementById("n_num1").value;
                     var text=document.getElementById("text_address1");
                     var val=text.innerHTML;
                     text.innerHTML="<input style='width:370px' type='text' id='n_address1' value="+val+" />";
                     document.getElementById("n_address1").focus();
-                    document.getElementById("n_address1").addEventListener("blur",function(e){
-                        text.innerHTML=document.getElementById("n_address1").value;
-                    });
                     document.getElementById("button_naddress1").style.display="none";
                     document.getElementById("button_saddress1").style.display="block";
                 };
                 function block_none1(){
+                    if(document.getElementById("n_address1").value==""){
+                        alert("默认地址不能为空！");
+                        return false;
+                    }
+                    document.getElementById("text_address1").innerHTML = document.getElementById("n_address1").value;
                     document.getElementById("button_address1").style.display="block";
                     document.getElementById("button_saddress1").style.display="none";
                 }
@@ -202,26 +209,30 @@
                 function none_next2(){
                     var text=document.getElementById("text_num2");
                     var val=text.innerHTML;
-                    text.innerHTML="<input style='width:130px' type='text' id='n_num2' value="+val+" />";
+                    if(val=="空")
+                        text.innerHTML="<input style='width:130px' type='text' id='n_num2'/>";
+                    else text.innerHTML="<input style='width:130px' type='text' id='n_num2' value="+val+" />";
                     document.getElementById("n_num2").focus();
-                    document.getElementById("n_num2").addEventListener("blur",function(e){
-                        text.innerHTML=document.getElementById("n_num2").value;
-                    });
                     document.getElementById("button_address2").style.display="none";
                     document.getElementById("button_naddress2").style.display="block";
                 }
                 function next_block2(){
+                    if(document.getElementById("n_num2").value=="")
+                        document.getElementById("text_num2").innerHTML = "空";
+                    else document.getElementById("text_num2").innerHTML = document.getElementById("n_num2").value;
                     var text=document.getElementById("text_address2");
                     var val=text.innerHTML;
-                    text.innerHTML="<input style='width:370px' type='text' id='n_address2' value="+val+" />";
+                    if(val=="空")
+                        text.innerHTML="<input style='width:130px' type='text' id='n_address2'/>";
+                    else text.innerHTML="<input style='width:370px' type='text' id='n_address2' value="+val+" />";
                     document.getElementById("n_address2").focus();
-                    document.getElementById("n_address2").addEventListener("blur",function(e){
-                        text.innerHTML=document.getElementById("n_address2").value;
-                    });
                     document.getElementById("button_naddress2").style.display="none";
                     document.getElementById("button_saddress2").style.display="block";
                 };
                 function block_none2(){
+                    if(document.getElementById("n_address2").value=="")
+                        document.getElementById("text_address2").innerHTML = "空";
+                    else document.getElementById("text_address2").innerHTML = document.getElementById("n_address2").value;
                     document.getElementById("button_address2").style.display="block";
                     document.getElementById("button_saddress2").style.display="none";
                 }
@@ -233,26 +244,30 @@
                 function none_next3(){
                     var text=document.getElementById("text_num3");
                     var val=text.innerHTML;
-                    text.innerHTML="<input style='width:130px' type='text' id='n_num3' value="+val+" />";
+                    if(val=="空")
+                        text.innerHTML="<input style='width:130px' type='text' id='n_num3'/>";
+                    else text.innerHTML="<input style='width:130px' type='text' id='n_num3' value="+val+" />";
                     document.getElementById("n_num3").focus();
-                    document.getElementById("n_num3").addEventListener("blur",function(e){
-                        text.innerHTML=document.getElementById("n_num3").value;
-                    });
                     document.getElementById("button_address3").style.display="none";
                     document.getElementById("button_naddress3").style.display="block";
                 }
                 function next_block3(){
+                    if(document.getElementById("n_num3").value=="")
+                        document.getElementById("text_num3").innerHTML = "空";
+                    else document.getElementById("text_num3").innerHTML = document.getElementById("n_num3").value;
                     var text=document.getElementById("text_address3");
                     var val=text.innerHTML;
-                    text.innerHTML="<input style='width:370px' type='text' id='n_address3' value="+val+" />";
+                    if(val=="空")
+                        text.innerHTML="<input style='width:130px' type='text' id='n_address3'/>";
+                    else text.innerHTML="<input style='width:370px' type='text' id='n_address3' value="+val+" />";
                     document.getElementById("n_address3").focus();
-                    document.getElementById("n_address3").addEventListener("blur",function(e){
-                        text.innerHTML=document.getElementById("n_address3").value;
-                    });
                     document.getElementById("button_naddress3").style.display="none";
                     document.getElementById("button_saddress3").style.display="block";
                 }
                 function block_none3(){
+                    if(document.getElementById("n_address3").value=="")
+                        document.getElementById("text_address3").innerHTML = "空";
+                    else document.getElementById("text_address3").innerHTML = document.getElementById("n_address3").value;
                     document.getElementById("button_address3").style.display="block";
                     document.getElementById("button_saddress3").style.display="none";
                 }
