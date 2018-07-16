@@ -156,38 +156,6 @@
                             <th width="100" class="sorting_disabled" rowspan="1" colspan="1" aria-label="操作" style="width: 72px;">操作</th>
                         </tr>
                         <button onclick="add_order()">a</button><button type="button" onclick="show_all()" class="btn btn-success">全部</button><span> </span><button type="button" onclick="hide_seller()" class="btn btn-success">买家</button><span> </span><button type="button" onclick="hide_buyer()" class="btn btn-success">卖家</button>
-                        <tr class="text-c va-m odd" role="row">
-                            <td><input name="" type="checkbox" value=""></td>
-                            <td class="sorting_1">1</td>
-                            <td>
-                                <a onclick="product_show('哥本哈根橡木地板','product-show.html','10001')" href="javascript:;">	<img width="60" class="product-thumb" src="src/images/9.jpg">
-                                </a>
-                            </td>
-                            <td class="text-good">
-                                <a style="text-decoration:none" onclick="product_show('哥本哈根橡木地板','product-show.html','10001')" href="javascript:;">哥本哈根橡木地板KS8373</a>
-                            </td>
-                            <td class="text-name">XXX</td>
-                            <td class="text-address">13900000000-X省X市X区(县)X街道(乡镇)X号</td>
-                            <td><span class="text-price">356.00</span>元</td>
-                            <td class="td-status">卖家</td>
-                            <td class="td-manage"><button id="order1" onclick="change_status(this)" class="Hui-iconfont">发货</button><div id="order1_" style="display: none">已完成</div></td>
-                        </tr>
-                        <tr class="text-c va-m odd" role="row">
-                            <td><input name="" type="checkbox" value=""></td>
-                            <td class="sorting_1">1</td>
-                            <td>
-                                <a onclick="product_show('哥本哈根橡木地板','product-show.html','10001')" href="javascript:;">	<img width="60" class="product-thumb" src="src/images/9.jpg">
-                                </a>
-                            </td>
-                            <td class="text-good">
-                                <a style="text-decoration:none" onclick="product_show('哥本哈根橡木门框','product-show.html','10001')" href="javascript:;">哥本哈根橡木门框KS8373</a>
-                            </td>
-                            <td class="text-name">XX</td>
-                            <td class="text-address">13700000000-X省X市X区(县)X街道(乡镇)X号</td>
-                            <td><span class="text-price">456.00</span>元</td>
-                            <td class="td-status">买家</td>
-                            <td class="td-manage"><button id="order2" onclick="change_status(this)" class="Hui-iconfont">收货</button><div id="order2_" style="display: none">已完成</div></td>
-                        </tr>
                         <script>
                             function change_status(a) {
                                 a.style.display = "none";
@@ -231,18 +199,24 @@
                                     }
                                 }
                             }
+                            var b=0;
                             function add_order(){
+                                var c,d=new Array("卖家","买家"),e=new Array("发货","收货");
+                                if(Math.random()<0.5)
+                                    c=0;
+                                else c=1;
+                                b++;
                                 var tbody = document.getElementById("DataTables_Table_0");
                                 tbody.innerHTML += "<tr class=\"text-c va-m odd\" role=\"row\">"+
                                     "<td><input name=\'\' type=\'checkbox\' value=\'\'></td>"+
-                                    "<td class=\'sorting_1\'>1</td>"+
+                                    "<td class=\'sorting_1\'>"+b+"</td>"+
                                     "<td><a onclick=\"product_show('哥本哈根橡木地板','product-show.html','10001')\" href=\"javascript:;\">\t<img width=\"60\" class=\"product-thumb\" src=\"src/images/9.jpg\"></a></td>"+
                                     "<td class=\"text-good\"><a style=\"text-decoration:none\" onclick=\"product_show('哥本哈根橡木地板','product-show.html','10001')\" href=\"javascript:;\">哥本哈根橡木地板KS8373</a></td>"+
                                     "<td class=\"text-name\">XXX</td>"+
                                     "<td class=\"text-address\">13900000000-X省X市X区(县)X街道(乡镇)X号</td>"+
                                     "<td><span class=\"text-price\">356.00</span>元</td>"+
-                                    "<td class=\"td-status\">卖家</td>"+
-                                    "<td class=\"td-manage\"><button class=\"Hui-iconfont\">发货</button></td></tr>";
+                                    "<td class=\"td-status\">"+d[c]+"</td>"+
+                                    "<td class=\"td-manage\"><button id=\"order"+b+"\"onclick=\"change_status(this)\" class=\"Hui-iconfont\">"+e[c]+"</button><div id=\"order"+b+"_\" style=\"display: none\">已完成</div></td></tr>";
                             }
                         </script>
                         </tbody>
