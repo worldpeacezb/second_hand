@@ -19,12 +19,20 @@
 		<div class="login-top">
 			<h1>LOGIN</h1>
 			<form >
-				<input type="text" value="User email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User email';}">
-				<input type="password" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}">
+				<input id="user_email" type="text" value="User email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User email';}">
+				<input id="user_psw" type="password" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}">
 			</form>
 			<div class="forgot">
-				<a href="index.html"><input type="submit" value="登录" id="b1"></a>
+				<a onclick="login()"><input type="submit" value="登录" id="b1"></a>
 			</div>
+			<script>
+                function login() {
+                    if(document.getElementById("user_email").value=="phn@qq.com"&&document.getElementById("user_psw").value=="123456")
+                        self.location='index.html';
+                    else alert("邮箱或密码错误");
+                }
+			</script>
+
 		</div>
 		<div class="login-bottom">
 			<h3>没有账号？   <a href="register.html">注册</a></h3>
