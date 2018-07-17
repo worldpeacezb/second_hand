@@ -49,7 +49,7 @@ function creatdiv_collect(){
                           "<figure>"+
                           "<div class=\"snipcart-item block\">"+
                           "<div class=\"snipcart-thumb\">"+
-                          "<a href=\"single.html\"><img src=\"src/images/17.jpg\" alt=\" \" class=\"img-responsive\" /></a>"+
+                          "<a href=\"single.html\"><img src=\"src/images/9.jpg\" alt=\" \" class=\"img-responsive\" /></a>"+
                           "<p>food for adult dogs (80 gms)</p>"+
                           "<h4>$3.00</h4></div>"+
                           "<div class=\"snipcart-details\">"+
@@ -116,7 +116,9 @@ var shop_data = {
                 "shopid":"2",
                 "shopname":"BBB",
                 "shopcost":"222",
-                "shopimg":"src/images/5.jpg"
+                "shopimg":"src/images/5.jpg",
+                "product_img":"admin/temp/product/Thumb/5.jpg",
+                "product_ms":"BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
             },
             {
                 "shopid":"3",
@@ -141,6 +143,60 @@ var shop_data = {
                 "shopname":"ABC",
                 "shopcost":"666",
                 "shopimg":"src/images/9.jpg"
+            }
+        ]
+};
+
+var product_data = {
+    "info":
+        [
+            {
+                "shopid":"1",
+                "shopname":"AAA",
+                "shopcost":"111",
+                "shopimg":"../src/images/4.jpg",
+                "product_img":"temp/product/Thumb/4.jpg",
+                "product_ms":"AAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            },
+            {
+                "shopid":"2",
+                "shopname":"BBB",
+                "shopcost":"222",
+                "shopimg":"../src/images/5.jpg",
+                "product_img":"temp/product/Thumb/5.jpg",
+                "product_ms":"BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+            },
+            {
+                "shopid":"3",
+                "shopname":"CCC",
+                "shopcost":"333",
+                "shopimg":"../src/images/6.jpg",
+                "product_img":"temp/product/Thumb/6.jpg",
+                "product_ms":"CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+            },
+            {
+                "shopid":"4",
+                "shopname":"DDD",
+                "shopcost":"444",
+                "shopimg":"../src/images/7.jpg",
+                "product_img":"temp/product/Thumb/7.jpg",
+                "product_ms":"dddddddddddddddddddddddddddddd"
+            },
+            {
+                "shopid":"5",
+                "shopname":"EEE",
+                "shopcost":"555",
+                "shopimg":"../src/images/8.jpg",
+                "product_img":"temp/product/Thumb/8.jpg",
+                "product_ms":"EEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+            },
+            {
+                "shopid":"6",
+                "shopname":"ABC",
+                "shopcost":"666",
+                "shopimg":"../src/images/9.jpg",
+                "product_img":"temp/product/Thumb/9.jpg",
+                "product_ms":"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
             }
         ]
 };
@@ -251,3 +307,35 @@ function total_total()
         }
     }
 }
+
+//后台界面产品列表显示
+/*
+function add_product() {
+    alert("2222");
+    var product = document.getElementById('product_body');
+
+    product.innerHTML += "<tr class=\"text-c va-m\">"+
+        "<td><input name=\"\" type=\"checkbox\" value=\"\"></td>\n" +
+        "<td>" +
+        shop_data.info[2].shopid +
+        "</td>\n" +
+        "<td><img class=\"product-thumb\" src=" +
+        shop_data.info[2].product_img +
+        "></a></td>\n" +
+        "<td class=\"text-l\">" +
+        shop_data.info[2].shopname +
+        "</td>\n" +
+        "<td class=\"text-l\">" +
+        shop_data.info[2].product_ms +
+        "</td>\n" +
+        "<td><span class=\"price\">" +
+        shop_data.info[2].shopcost +
+        "</span> 元</td>\n" +
+        "<td class=\"td-status\"><span class=\"label label-success radius\">已发布</span></td>\n" +
+        "<td class=\"td-manage\"><a style=\"text-decoration:none\" " +
+        "onClick=\"product_stop(this,'10001')\" href=\"javascript:;\" title=\"通过\">" +
+        "<i class=\"Hui-iconfont\">&#xe6de;</i></a><a style=\"text-decoration:none\" class=\"ml-5\" " +
+        "onClick=\"dataallow()\" href=\"javascript:;\" title=\"删除\">" +
+        "<i class=\"Hui-iconfont\">&#xe6e2;</i></a></td></tr>\n";
+}
+*/
