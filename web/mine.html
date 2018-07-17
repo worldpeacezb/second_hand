@@ -174,7 +174,9 @@
                 function none_next1() {
                     var text = document.getElementById("text_num1");
                     var val = text.innerHTML;
-                    text.innerHTML = "<input style='width:130px' type='text' id='n_num1' value=" + val + " />";
+                    if(val=="空")
+                        text.innerHTML="<input style='width:130px' type='text' id='n_num1'/>";
+                    else text.innerHTML="<input style='width:130px' type='text' id='n_num1' value="+val+" />";
                     document.getElementById("n_num1").focus();
                     document.getElementById("button_address1").style.display = "none";
                     document.getElementById("button_naddress1").style.display = "block";
@@ -187,7 +189,9 @@
                     document.getElementById("text_num1").innerHTML = document.getElementById("n_num1").value;
                     var text=document.getElementById("text_address1");
                     var val=text.innerHTML;
-                    text.innerHTML="<input style='width:370px' type='text' id='n_address1' value="+val+" />";
+                    if(val=="空")
+                        text.innerHTML="<input style='width:130px' type='text' id='n_address1'/>";
+                    else text.innerHTML="<input style='width:130px' type='text' id='n_address1' value="+val+" />";
                     document.getElementById("n_address1").focus();
                     document.getElementById("button_naddress1").style.display="none";
                     document.getElementById("button_saddress1").style.display="block";
