@@ -103,104 +103,6 @@ Item.prototype = {
 var p1 = new Item("1","ABC","10","src/images/4.jpg")
 */
 
-var shop_data = {
-    "info":
-        [
-            {
-                "shopid":"1",
-                "shopname":"AAA",
-                "shopcost":"111",
-                "shopimg":"src/images/4.jpg"
-            },
-            {
-                "shopid":"2",
-                "shopname":"BBB",
-                "shopcost":"222",
-                "shopimg":"src/images/5.jpg",
-                "product_img":"admin/temp/product/Thumb/5.jpg",
-                "product_ms":"BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
-            },
-            {
-                "shopid":"3",
-                "shopname":"CCC",
-                "shopcost":"333",
-                "shopimg":"src/images/6.jpg"
-            },
-            {
-                "shopid":"4",
-                "shopname":"DDD",
-                "shopcost":"444",
-                "shopimg":"src/images/7.jpg"
-            },
-            {
-                "shopid":"5",
-                "shopname":"EEE",
-                "shopcost":"555",
-                "shopimg":"src/images/8.jpg"
-            },
-            {
-                "shopid":"6",
-                "shopname":"ABC",
-                "shopcost":"666",
-                "shopimg":"src/images/9.jpg"
-            }
-        ]
-};
-
-var product_data = {
-    "info":
-        [
-            {
-                "shopid":"1",
-                "shopname":"AAA",
-                "shopcost":"111",
-                "shopimg":"../src/images/4.jpg",
-                "product_img":"temp/product/Thumb/4.jpg",
-                "product_ms":"AAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-            },
-            {
-                "shopid":"2",
-                "shopname":"BBB",
-                "shopcost":"222",
-                "shopimg":"../src/images/5.jpg",
-                "product_img":"temp/product/Thumb/5.jpg",
-                "product_ms":"BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
-            },
-            {
-                "shopid":"3",
-                "shopname":"CCC",
-                "shopcost":"333",
-                "shopimg":"../src/images/6.jpg",
-                "product_img":"temp/product/Thumb/6.jpg",
-                "product_ms":"CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
-            },
-            {
-                "shopid":"4",
-                "shopname":"DDD",
-                "shopcost":"444",
-                "shopimg":"../src/images/7.jpg",
-                "product_img":"temp/product/Thumb/7.jpg",
-                "product_ms":"dddddddddddddddddddddddddddddd"
-            },
-            {
-                "shopid":"5",
-                "shopname":"EEE",
-                "shopcost":"555",
-                "shopimg":"../src/images/8.jpg",
-                "product_img":"temp/product/Thumb/8.jpg",
-                "product_ms":"EEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
-            },
-            {
-                "shopid":"6",
-                "shopname":"ABC",
-                "shopcost":"666",
-                "shopimg":"../src/images/9.jpg",
-                "product_img":"temp/product/Thumb/9.jpg",
-                "product_ms":"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
-            }
-        ]
-};
-
 var shopname1 = new Array("AA","BB","CC")
 var cost = new Array("1","2","3")
 var img = new Array("src/images/4.jpg","src/images/5.jpg","src/images/6.jpg")
@@ -339,3 +241,132 @@ function add_product() {
         "<i class=\"Hui-iconfont\">&#xe6e2;</i></a></td></tr>\n";
 }
 */
+
+
+var shop_data = {
+    "info":
+        [
+            {
+                "shopid":"1",
+                "shopname":"AAA",
+                "shopcost":"111",
+                "shopimg":"src/images/4.jpg"
+            },
+            {
+                "shopid":"2",
+                "shopname":"BBB",
+                "shopcost":"222",
+                "shopimg":"src/images/5.jpg",
+                "product_img":"admin/temp/product/Thumb/5.jpg",
+                "product_ms":"BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+            },
+            {
+                "shopid":"3",
+                "shopname":"CCC",
+                "shopcost":"333",
+                "shopimg":"src/images/6.jpg"
+            },
+            {
+                "shopid":"4",
+                "shopname":"DDD",
+                "shopcost":"444",
+                "shopimg":"src/images/7.jpg"
+            },
+            {
+                "shopid":"5",
+                "shopname":"EEE",
+                "shopcost":"555",
+                "shopimg":"src/images/8.jpg"
+            },
+            {
+                "shopid":"6",
+                "shopname":"ABC",
+                "shopcost":"666",
+                "shopimg":"src/images/9.jpg"
+            }
+        ]
+};
+
+var product_data = {
+    "info":
+        [
+            {
+                "shopid":"1",
+                "shopname":"AAA",
+                "shopcost":"111",
+                "shopimg":"../src/images/4.jpg",
+                "product_img":"temp/product/Thumb/4.jpg",
+                "product_ms":"AAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            },
+            {
+                "shopid":"2",
+                "shopname":"BBB",
+                "shopcost":"222",
+                "shopimg":"../src/images/5.jpg",
+                "product_img":"temp/product/Thumb/5.jpg",
+                "product_ms":"BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+            },
+            {
+                "shopid":"3",
+                "shopname":"CCC",
+                "shopcost":"333",
+                "shopimg":"../src/images/6.jpg",
+                "product_img":"temp/product/Thumb/6.jpg",
+                "product_ms":"CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+            },
+            {
+                "shopid":"4",
+                "shopname":"DDD",
+                "shopcost":"444",
+                "shopimg":"../src/images/7.jpg",
+                "product_img":"temp/product/Thumb/7.jpg",
+                "product_ms":"dddddddddddddddddddddddddddddd"
+            },
+            {
+                "shopid":"5",
+                "shopname":"EEE",
+                "shopcost":"555",
+                "shopimg":"../src/images/8.jpg",
+                "product_img":"temp/product/Thumb/8.jpg",
+                "product_ms":"EEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+            },
+            {
+                "shopid":"6",
+                "shopname":"ABC",
+                "shopcost":"666",
+                "shopimg":"../src/images/9.jpg",
+                "product_img":"temp/product/Thumb/9.jpg",
+                "product_ms":"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+            }
+        ]
+};
+
+var user_data = {
+    "info":
+        [
+            {
+                "userid": "1",
+                "username": "aa123456@qq.com",
+                "userphone":"13100000001",
+                "useraddress":"北京市 AA区",
+            },
+            {
+                "userid": "2",
+                "username": "bb123456@qq.com",
+                "userphone":"13100000002",
+                "useraddress":"北京市 BB区",
+            },
+            {
+                "userid": "3",
+                "username": "cc123456@qq.com",
+                "userphone":"13100000003",
+                "useraddress":"北京市 CC区",
+            },
+            {
+                "userid": "4",
+                "username": "dd123456@qq.com",
+                "userphone":"13100000004",
+                "useraddress":"北京市 DD区",
+            }
+        ]
+}
