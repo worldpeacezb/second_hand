@@ -57,13 +57,8 @@
 	</div>
 	<div class="w3l_search">
 		<form action="#" method="post">
-			<input class="search" type="text" name="Product" value="搜索商品..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '搜索商品...';}" required="">
-			<input type="submit" id="testAjax" value="查 询">
-			<script>
-                $('.search').on('input', function() {
-                    initSearchList();
-                });
-			</script>
+			<input id="search_data" class="search" type="text" name="Product" value="搜索商品..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '搜索商品...';}" required="">
+			<input type="button" id="total_text" value="查 询" style="height: 42px">
 		</form>
 	</div>
 	<div class="w3l_header_right1">
@@ -127,6 +122,12 @@
 			<div class="w3ls_w3l_banner_nav_right_grid w3ls_w3l_banner_nav_right_grid_sub" id="banner"></div>
 			<script>
                 total_total()
+                var search_text
+                $("#total_text").click(function(){
+                    search_text = document.getElementById("search_data").value;
+                    alert(search_text);
+                    search();
+                })
 			</script>
 		</div>
 		<div class="clearfix"></div>

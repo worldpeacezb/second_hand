@@ -135,6 +135,12 @@ var shop_data = {
                 "shopname":"EEE",
                 "shopcost":"555",
                 "shopimg":"src/images/8.jpg"
+            },
+            {
+                "shopid":"6",
+                "shopname":"ABC",
+                "shopcost":"666",
+                "shopimg":"src/images/9.jpg"
             }
         ]
 };
